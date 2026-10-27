@@ -111,3 +111,10 @@
 - STATUS e retomada ativos limpos; suspensões não geram cobrança de insumos nem bloqueiam as tasks locais.
 - F5 planejada ajustada no Plano para validar refinamentos e encerrar o conjunto; não liberada automaticamente.
 - Publicação documental autorizada; nenhuma implementação, migração ou mudança em produção.
+
+
+## 2026-10-27 17:51 — instruções de entrada alinhadas
+
+- README, CLAUDE e AGENTS corrigidos para a Fase 4 atual e retomada pela REF-01; referências de entrada às fases anteriores removidas.
+- Sem mudança de fase, tarefa, status de execução ou aceite. Orientações para coleta de insumos e teste humano consistentes.
+- Nenhuma execução automática ou atualização de sessão aberta é presumida pela publicação documental.

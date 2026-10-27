@@ -60,7 +60,7 @@
     },
     {
       "path": "changelog.md",
-      "sha256": "ca15fb7703ead05231917e5b9d4486b371d3f3f9df7d3cac9e29ac6a541710b9",
+      "sha256": "361dd94d3c7ebdb271bd0eb0b7a98a66a22b33a12e9d3f5e8c81a6e13db16bba",
       "classification": "template-publico"
     },
     {
@@ -92,6 +92,21 @@
       "path": "03_documentos/direcao-encerramento-20261027.md",
       "sha256": "cd383894944889b57346e491a7506fcabbf78f2893c45fea6b95310a15a333fc",
       "classification": "template-publico"
+    },
+    {
+      "path": "README.md",
+      "classification": "template-publico",
+      "sha256": "c8193da5ea2414b8094861b2cb3523f66910476ff11577adfe2a00955bbbba04"
+    },
+    {
+      "path": "CLAUDE.md",
+      "classification": "template-publico",
+      "sha256": "e768836eca57cecf3ad8117d26c459f6e42450fadeb5a2a8e2bf07710b87c472"
+    },
+    {
+      "path": "AGENTS.md",
+      "classification": "template-publico",
+      "sha256": "163761f78219892ac160f3477ebae6bea400f66e74ce8d655966357b3dd0ae82"
     }
   ],
   "amendment": {
@@ -105,5 +120,6 @@
     "id": "E-F4-KOMMO-20261027",
     "status": "integração suspensa; fontes locais; CRM futuro não autorizado"
   },
-  "directionConfirmedAt": "2026-10-27T17:43:00-03:00"
+  "directionConfirmedAt": "2026-10-27T17:43:00-03:00",
+  "entryInstructionsUpdatedAt": "2026-10-27T17:51:00-03:00"
 }

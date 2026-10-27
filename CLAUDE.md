@@ -1,11 +1,23 @@
 # Espaço operacional do cliente
 
-Esta pasta contém apenas materiais liberados para a operação da fase atual.
+Repo do cliente: https://github.com/ramonpadua/cliente-academia-fellice-fitness
 
-## Leitura obrigatória
+## Estado e retomada
 
-1. Abra exatamente `04_fase-atual/fase.md`.
-2. Para F2-T001, leia exatamente `04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md`.
-3. O diretório `04-fase-atual/` não existe e não deve ser usado como alias.
+- Fase atual: **Fase 4**, a mesma fase em execução, agora com tarefas ajustadas para os refinamentos da plataforma.
+- Objetivo: refinar, validar e concluir a plataforma atual. Fase 5 permanece planejada e só será liberada após aceite formal da Fase 4.
+- Primeira task elegível: **REF-01 — Entender e corrigir a abertura da Fila**, UUID `3c9a7ea2-63fd-4aa5-a370-cdc04e796456`.
+- Leia `STATUS.md`, `.adapta-cliente/estado-atual.md`, `04_fase-atual/fase.md`, `04_fase-atual/00-Tasks_Gerais.md` e a seção REF-01 da `04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md` antes de agir.
+- Quatro cards e a subtarefa suspensos são somente rastreabilidade: não executar, não pedir credenciais ou insumos e não contar como entregues. Não são pré-condição dos refinamentos.
+- Fases encerradas, aceites e IDs existentes permanecem preservados. Não reiniciar fases nem reabrir tasks concluídas.
+- Novo mapeamento somente depois do encerramento da Fase 5, em outro processo. Não discutir ou implementar novo escopo nas tasks atuais.
 
-> Invariante de caminho: `04_fase-atual` usa `_` depois de `04` e `-` entre `fase` e `atual`. Não normalize o nome.
+## Como conduzir a primeira task
+
+Na retomada da conversa, após ler os arquivos atuais, explique em linguagem simples que a cliente continua na Fase 4 e que o próximo passo é investigar a Fila. Pergunte qual tela/link não abre e qual erro ela vê; depois colete os demais detalhes necessários da REF-01, sem solicitar senha. Diagnóstico primeiro; se faltar decisão necessária, pergunte na própria task. Sem resposta, não invente a regra nem implemente o trecho dependente dela. Não declarar corrigido sem reproduzir e provar.
+
+Uma implementação por vez. Apresente o plano mínimo, execute somente o recorte autorizado, registre prova sanitizada e peça teste humano explícito antes de concluir e avançar. Esta publicação documental não inicia execução automática nem comprova atualização de uma sessão já aberta.
+
+## Caminho canônico
+
+Use exatamente `04_fase-atual/`, com underscore depois de 04 e hífen entre fase e atual. Não normalize o nome. As SPECs históricas e os documentos arquivados não substituem a direção vigente em STATUS e na Jornada.
