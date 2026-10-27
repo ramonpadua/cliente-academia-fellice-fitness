@@ -88,3 +88,11 @@
 ## 2026-10-16
 
 - Ciclo paralelo de design system (fora da task `7953f975`, que segue bloqueada nas decisões B4-01/02/05): Ricardo autorizou escopo "formulário + páginas internas", tema claro + escuro completos e implementação em paralelo com a Fase 4. Fase A concluída: tema Fellice nos tokens de `src/main.css` (laranja 21 90% 48% como `--primary` no claro, 25 95% 53% no escuro, fundo creme 30 98% 98%, raio 0.75rem). Fase B concluída: `src/pages/Index.tsx` migrado para shadcn/ui (Form, Input, Select, Checkbox, Button) com react-hook-form + zod e mensagens de erro por campo; contrato de dados preservado (form_id `fellice-captura-01`, form_version `v1.0.0`, eventos FORM_STARTED/TRIAGEM_CONCLUIDA/HANDOFF_CREATED, UTM, consentimento). QA Skip completo passou (setup, estática, build, integrações) em v0.0.89 (commit `3a3bd99`); provas no preview: renderização, validação vazia, popover do select, modo escuro. Teste humano de Ricardo aprovado ("Testei e funcionou", 16/10). Submissão real de teste não foi realizada; nenhuma limpeza necessária. Nada foi publicado em produção; nenhuma coleção, hook ou migração alterada.
+
+## 2026-10-27 — Emenda E-F4-REF-20261027
+
+- Aprovação explícita do consultor Ramon às 17:25 para atualizar documentos e publicar refinamentos.
+- Acrescentadas `04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md`, 12 cards com UUIDs únicos e pendentes em `04_fase-atual/fase.md`, tabela operacional e `04_fase-atual/matriz-rastreabilidade-emenda-20261027.md`. Cobertura dos 16 pedidos da cliente.
+- Atualizados índice, STATUS e orientação de retomada. Oito cards originais e subtarefa preservados byte a byte; fases encerradas e SPECs anteriores não alteradas.
+- Insumos coletados nas próprias tasks; pontuação não é elegibilidade, rótulo não é estado. Fila permanece relato a reproduzir, não defeito já corrigido.
+- Publicação apenas documental; integração mantém seus gates. App, base e produção intocados.

@@ -25,18 +25,18 @@
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "87a66dea26fd61cc448f3b1307fe47a5094ebc58689bb07eb68e51875ef332a6",
+      "sha256": "cf63d0841f4302dc1f29a5d0fc5b5c8eedf7cc2146a100465a91be6eaac9c634",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/00-Tasks_Gerais.md",
-      "sha256": "7b7480910168581eb09151c118df8bff061373e8a84eb95032a7a3a74f374db1",
-      "classification": "fase-atual"
+      "sha256": "98805477d901370d6ce947ecf644802b1221ffbe259956f95132fc9a1845bc8f",
+      "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/specs/00-INDICE.md",
-      "sha256": "28f28c83a3a6cb435686a2733ef49c99746eafcbd5c294ce3b18620db26e7dfd",
-      "classification": "fase-atual"
+      "sha256": "784737fa753066917e5087e6a48adbc6f5b994cab37dde5facf6bb1e36238a58",
+      "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md",
@@ -55,18 +55,40 @@
     },
     {
       "path": "STATUS.md",
-      "sha256": "8d0da9c7b4a11c623b2dd94a40afa962e096e058ece2eece7dd6f724017c8a7e",
-      "classification": "status"
+      "sha256": "b3b497373b7ab1ddbb8c2a76c49a10e1bd204dc5e1e01d3bc4fdc61e2f2538e9",
+      "classification": "template-publico"
     },
     {
       "path": "changelog.md",
-      "sha256": "aedd363dadcf188ef37da79c9bfb0a172cb0b2dddc1ea6f2832b5f2e60053df4",
-      "classification": "changelog"
+      "sha256": "8c39ad19d58094b07f293565d90b37592f6cc04d2ed520bf95935ef4e80fdf20",
+      "classification": "template-publico"
     },
     {
       "path": ".adapta-cliente/estado-atual.md",
-      "sha256": "444ee61de6339b2ec835de2e9295833265c77f6e4a5ed3ea4d960c63f87856c0",
-      "classification": "estado-operacional"
+      "sha256": "3507dde5bf7bb85469b1aee63fdb55da9a68270e7134110886ca4560838fd7d7",
+      "classification": "template-publico"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md",
+      "sha256": "520ec6f4ae100ec2b5d72fb84fdee8a519c98f6616e5393baf18cbab023393cf",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/matriz-rastreabilidade-emenda-20261027.md",
+      "sha256": "0b7877521da43087eeb422e6cf6708ab6dad6122b44661f79cc7832468f4312b",
+      "classification": "template-publico"
+    },
+    {
+      "path": "03_documentos/emenda-refinamentos-20261027.md",
+      "sha256": "4d33bd0d3e4f998bec6e39a2066ba503b3f9ac212a5ac107e638d88dabc3144b",
+      "classification": "template-publico"
     }
-  ]
+  ],
+  "amendment": {
+    "id": "E-F4-REF-20261027",
+    "authorizedAt": "2026-10-27T17:25:00-03:00",
+    "newTopLevelTasks": 12,
+    "status": "documental; implementação pendente",
+    "originalCardsPreserved": true
+  }
 }

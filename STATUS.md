@@ -21,3 +21,12 @@
 ## Próxima ação
 
 Obter a citação literal com data/hora da mensagem original da Champion (confirmação do destino e da direção Skip → Kommo) e do Comercial (regra de unificação — B4-05); criar conta de teste segregada para a prova técnica (B4-02) e validar a base legal “Consentimento” com o responsável por privacidade/LGPD (B4-01). Até lá, manter a task bloqueada e não acessar contas que não sejam de teste nem realizar escrita externa.
+
+
+## Emenda E-F4-REF-20261027 — aprovada em 27/10/2026 17:25
+
+Ramon aprovou a proposta e autorizou atualizar documentos e publicar os cards. Acrescentadas SPEC-4-004 e REF-01 a REF-12 para os 16 pedidos de formulário/Fila/Visão; todos pendentes. F4 permanece atual: oito tasks originais + 12 novas = 20 tasks de topo (0/20 concluídas); a subtarefa original não entra no denominador. Não houve implementação nem teste do app nesta publicação.
+
+Tasks e SPECs anteriores preservadas; fases encerradas intocadas. O bloqueio da integração 7953f975 permanece; não precisa ser vencido para diagnosticar os refinamentos locais. Nenhum CRM, conta externa, credencial, escrita no banco ou publicação de produção autorizados pela emenda.
+
+**Próxima ação segura:** iniciar REF-01 em diagnóstico somente leitura, confirmar com a cliente qual Fila e reproduzir o sintoma. Depois seguir REF-02, respeitando uma implementação por vez, decisões dentro dos cards e teste humano antes de avançar. A integração tem uma fila de trabalho separada: não executá-la em paralelo ao refinamento.

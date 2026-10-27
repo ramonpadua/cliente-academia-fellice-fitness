@@ -35,3 +35,12 @@
 ## Nota de liberação
 
 Transição preparada em 30/09/2026 após o fechamento da Fase 3 (`check-fase-3.md` APROVADO COM RESSALVAS, active-sha256=7bbfdac4e985eac699880e3539ab59e529db3636fc77c8eec4af10377652ede3). SPECs aprovadas pelo consultor e tasks geradas em 01/10/2026; promoção F3→F4 neste repositório autorizada pelo consultor ("Confirmo o push: promova a Fase 4 no repositório da Fellice"). Nenhuma credencial, conector, escrita externa ou publicação de produção é autorizada por estas SPECs; execução uma task por vez com teste humano entre elas.
+
+
+## Emenda aprovada em 27/10/2026
+
+| ID | Arquivo | Status | Dono |
+|---|---|---|---|
+| SPEC-4-004 | [spec-4-004-refinamento-formulario-fila-visao.md](spec-4-004-refinamento-formulario-fila-visao.md) | documentação aprovada; REF-01 a REF-12 pendentes; insumos coletados nas tasks | Karol e Márcio |
+
+Leva residual de refinamento independente do desbloqueio da integração. Não substitui SPEC-4-001, 002 e 003. Matriz aditiva em `04_fase-atual/matriz-rastreabilidade-emenda-20261027.md` (caminho relativo à raiz do projeto).
