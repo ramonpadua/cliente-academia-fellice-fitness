@@ -1,5 +1,15 @@
 # SPEC-4-004 — Refinamento do formulário, Fila e Visão
 
+## Direção vigente — confirmação do consultor em 27/10/2026 17:43
+
+Objetivo único das etapas restantes: refinar, validar e concluir a plataforma atual. Executar REF-01 a REF-12, depois os controles locais de qualidade/conversão previstos na fase 4, e finalizar com validação ponta a ponta e encerramento na fase 5. Novo mapeamento somente APÓS concluir a fase 5, em outro processo, sem entrega adicional presumida neste plano.
+
+Não solicitar credenciais, desenhar integrações externas ou inserir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
+
+Uma implementação por vez, insumos operacionais perguntados à cliente na própria task, prova técnica e teste humano explícito. Primeira ação: REF-01, diagnóstico da Fila. Prazos a combinar. Nada é marcado concluído por esta atualização documental.
+
+## Contrato de refinamentos aprovado (mantido)
+
 ## Emenda e autorização
 
 **Emenda E-F4-REF-20261027**, aprovada por Ramon em 27/10/2026 às 17:25: “Aprovo a proposta. Atualize os documentos e publique as novas tasks, preservando as concluídas.” Fonte dos 16 pedidos: documento da cliente `pontos_de_melhoria.docx`, recebido em 27/10/2026; conteúdo operacional transcrito nos contratos abaixo. Proposta de 12 tasks aprovada. Aprovação da documentação não equivale a execução ou aceite de produto.

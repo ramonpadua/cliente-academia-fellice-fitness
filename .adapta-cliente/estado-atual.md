@@ -1,21 +1,14 @@
-# Estado atual — Adapta Cliente
+# Estado atual — refinamentos
 
-- task_id: 7953f975-0f69-42a0-a9a1-b028429550cb
-- champion: Karol e Márcio
-- spec: 04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md
-- etapa: bloqueada
-- autorizacao_implementacao: confirmada — 2026-10-02, 10:37 (America/Bahia); Ricardo Junior: “pode implementar”, após análise desta task entregue anteriormente
-- teste_humano: pendente — 16/10/2026 17:12 (America/Bahia): Ricardo declarou “validado”, aprovando a revisão documental do registro B4 de 16/10; aprovação documental apenas, sem citações literais (Karol/Comercial), sem confirmação da conta de teste e sem responsável LGPD; gates B4-01/02/05 permanecem pendentes; task bloqueada
-- verificacao_automatica: passou — registro B4 gravado e provado byte-exato (blob 52602b9d, 26.124 bytes); validação de 17:12 registrada (commit 7788e1fe, blob ce0574fa) e reparada em 956c1b35 após detectar 3 palavras degradadas em conteúdo preexistente (blob final 191e60e3, 26.652 bytes, conferido pela API = cópia local); aprendizado AP-2026-10-16-1600 registrado (ed914974, 34481d02); diff em artifacts/diff-decisoes-fase-4-16-10.patch
-- aprendizado: capturado:AP-2026-10-16-1600-transcricao-mcp-corrompida.md
-- ultima_acao: validação documental de Ricardo (17:12) registrada no histórico do documento e reparo do commit 7788e1fe executado (956c1b35); nenhuma coleção do PocketBase escrita, nenhuma conta externa acessada, nenhuma credencial criada, nenhuma prova técnica executada
-- proxima_acao: obter citação literal com data/hora da Champion (Karol) e do Comercial (B4-01/B4-05), confirmar conta de teste segregada (B4-02) e identificar o responsável LGPD (B4-01); task seguinte não liberada
-- atualizado_em: 2026-10-16T17:16:00-03:00
+## Direção vigente — confirmação do consultor em 27/10/2026 17:43
 
-## Emenda E-F4-REF-20261027 — aprovada em 27/10/2026 17:25
+Objetivo único das etapas restantes: refinar, validar e concluir a plataforma atual. Executar REF-01 a REF-12, depois os controles locais de qualidade/conversão previstos na fase 4, e finalizar com validação ponta a ponta e encerramento na fase 5. Novo mapeamento somente APÓS concluir a fase 5, em outro processo, sem entrega adicional presumida neste plano.
 
-Ramon aprovou a proposta e autorizou atualizar documentos e publicar os cards. Acrescentadas SPEC-4-004 e REF-01 a REF-12 para os 16 pedidos de formulário/Fila/Visão; todos pendentes. F4 permanece atual: oito tasks originais + 12 novas = 20 tasks de topo (0/20 concluídas); a subtarefa original não entra no denominador. Não houve implementação nem teste do app nesta publicação.
+Não solicitar credenciais, desenhar integrações externas ou inserir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
 
-Tasks e SPECs anteriores preservadas; fases encerradas intocadas. O bloqueio da integração 7953f975 permanece; não precisa ser vencido para diagnosticar os refinamentos locais. Nenhum CRM, conta externa, credencial, escrita no banco ou publicação de produção autorizados pela emenda.
+Uma implementação por vez, insumos operacionais perguntados à cliente na própria task, prova técnica e teste humano explícito. Primeira ação: REF-01, diagnóstico da Fila. Prazos a combinar. Nada é marcado concluído por esta atualização documental.
 
-**Próxima ação segura:** iniciar REF-01 em diagnóstico somente leitura, confirmar com a cliente qual Fila e reproduzir o sintoma. Depois seguir REF-02, respeitando uma implementação por vez, decisões dentro dos cards e teste humano antes de avançar. A integração tem uma fila de trabalho separada: não executá-la em paralelo ao refinamento.
+- etapa: aguarda início do diagnóstico REF-01
+- implementação: não iniciada nesta emenda
+- teste humano: pendente por task
+- fase_5: planejada, liberar somente pelo ritual após F4

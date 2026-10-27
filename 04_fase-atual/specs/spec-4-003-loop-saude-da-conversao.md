@@ -1,5 +1,34 @@
 # SPEC-4-003 — Loop de saúde da conversão (loop adicional da Fase 4)
 
+## Direção vigente — confirmação do consultor em 27/10/2026 17:43
+
+Objetivo único das etapas restantes: refinar, validar e concluir a plataforma atual. Executar REF-01 a REF-12, depois os controles locais de qualidade/conversão previstos na fase 4, e finalizar com validação ponta a ponta e encerramento na fase 5. Novo mapeamento somente APÓS concluir a fase 5, em outro processo, sem entrega adicional presumida neste plano.
+
+Não solicitar credenciais, desenhar integrações externas ou inserir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
+
+Uma implementação por vez, insumos operacionais perguntados à cliente na própria task, prova técnica e teste humano explícito. Primeira ação: REF-01, diagnóstico da Fila. Prazos a combinar. Nada é marcado concluído por esta atualização documental.
+
+**Status vigente: AJUSTADA para conversão LOCAL.** Esta seção substitui as dependências e fontes externas do texto histórico abaixo:
+
+- Fonte: somente eventos locais autorizados das fases anteriores e novos refinamentos; não consumir estado de Kommo/Lovable ou fila/conector externo.
+- Pré-condições: REF-01 a REF-12 aceitas, baseline B4-04 congelado por versão/fórmula/período/cobertura e alvo aprovado. Removida a dependência “integração configurada”. Não recalcular histórico ou misturar versões sem explicitar cobertura.
+- Privacidade: manter base legal e papéis autorizados para dados locais; B4-01 na parte de autorização de escrita externa não é gate. Dado insuficiente ou sem autorização interrompe análise.
+- CA-4-011/012/013 preservados. CA-4-014 vigente: falha da fonte/medição LOCAL interrompe recomendações e abre pendência com responsável. Nenhuma credencial ou teste de conector é solicitado.
+- TDD local RED: ausência de registro de ciclo; GREEN: baseline e 2 ciclos sintéticos completos (cobertura, achado, veredito), sem ação externa; REGRESSÃO: fonte local indisponível ou cobertura insuficiente interrompe recomendações, alvo/veredito ausente não libera ação, escrita externa recusada. Prova humana mantém gate.
+- Fechamento: CA-4-011 a CA-4-014 locais + CA-4-R01 a R12, sem cobrar CA-4-001 a CA-4-010 suspensos. Veredito do consultor em task de fechamento. Suspensão não é conclusão.
+
+## Tasks vinculadas — projeção vigente
+
+| Task | Critério | Pré-condição | Status |
+|---|---|---|---|
+| Congelar baseline e aprovar alvo | B4-04 + alvo | versão/fórmula/cobertura, decisão Champion/Gestão | Pendente |
+| `31dae29a-884a-4ac6-a23a-2cfc5b0e56a8` Configurar loop local | CA-4-011 a 014 locais | baseline/alvo e REF-01 a REF-12 aceitas | Pendente |
+| `12bf95df-e79a-4ef2-b4f1-214fc65c3cbb` Ciclo/recuperação local | CA-4-011/014 locais | loop aceito | Pendente |
+| `c5ccd038-0cae-4e1d-9d72-52e2d3ef935d` Revisão final Ramon | CA locais + CA-4-R01 a R12 | refinamentos e ciclo local aceitos | Pendente |
+
+
+## Contrato anterior — histórico, subordinado à vigência acima
+
 **Fase:** 4
 **Status:** SPEC aprovada pelo consultor em 30/09/2026 ("libero todas as specs, pode executar"); tasks geradas. O loop não é ativado em produção por esta SPEC.
 

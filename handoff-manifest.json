@@ -25,62 +25,72 @@
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "cf63d0841f4302dc1f29a5d0fc5b5c8eedf7cc2146a100465a91be6eaac9c634",
+      "sha256": "f852b77c0472780e27cf3bbc895915421d379faa58baa2419bdf8fcc66894ac0",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/00-Tasks_Gerais.md",
-      "sha256": "98805477d901370d6ce947ecf644802b1221ffbe259956f95132fc9a1845bc8f",
+      "sha256": "8bddab53d914dc1dc4130e80ae451decb6d4bda56345c0dae7c01c28e91c2b7e",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/specs/00-INDICE.md",
-      "sha256": "784737fa753066917e5087e6a48adbc6f5b994cab37dde5facf6bb1e36238a58",
+      "sha256": "68cc4b3f1904eda2d262e77ff071ea0eca57208efd7b63aee971e751013fe46e",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md",
-      "sha256": "47357d2dabd73c1933ac62cf08bdde2661d7a388d6fdd7dd237cb467dc5428a2",
+      "sha256": "a22b0a520ea3cc02e8bc3ccaba060f3a535a9c506f52074f41de3eebd105e9db",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-4-002-painel-saude-integracao-e-historico.md",
-      "sha256": "a3060ae5718b074e8954d9fc2780a54e46c07ac9b9d08aa090e24ab47a57c019",
+      "sha256": "df8a4add0db72d1b0d9198cfef736516436ea27631d1a59fc0c83cf9d1f42585",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-4-003-loop-saude-da-conversao.md",
-      "sha256": "3c7a085b768a8c3f758f10847cc2dd8f0c8523898fe5fd8c9c276a96ca8ce229",
+      "sha256": "212976bf64641716716617b6b3e8776e33df181b614e779bb9d51ac893e3a87a",
       "classification": "spec-fase-atual"
     },
     {
       "path": "STATUS.md",
-      "sha256": "b3b497373b7ab1ddbb8c2a76c49a10e1bd204dc5e1e01d3bc4fdc61e2f2538e9",
+      "sha256": "4adc0423d6c82194784f8c9ff4ca14884e896e101ef95b041ef4fd47ed867e40",
       "classification": "template-publico"
     },
     {
       "path": "changelog.md",
-      "sha256": "8c39ad19d58094b07f293565d90b37592f6cc04d2ed520bf95935ef4e80fdf20",
+      "sha256": "ca15fb7703ead05231917e5b9d4486b371d3f3f9df7d3cac9e29ac6a541710b9",
       "classification": "template-publico"
     },
     {
       "path": ".adapta-cliente/estado-atual.md",
-      "sha256": "3507dde5bf7bb85469b1aee63fdb55da9a68270e7134110886ca4560838fd7d7",
+      "sha256": "360e75a4accb1ecb3e9bf550fea7364aa08eb6c7bc021bfd2c390aaa91af31e3",
       "classification": "template-publico"
     },
     {
       "path": "04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md",
-      "sha256": "520ec6f4ae100ec2b5d72fb84fdee8a519c98f6616e5393baf18cbab023393cf",
+      "sha256": "c0bc0a43236248714eec7b80ac1792d69a107308d7fbe04285db209ffa5f6e0f",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/matriz-rastreabilidade-emenda-20261027.md",
-      "sha256": "0b7877521da43087eeb422e6cf6708ab6dad6122b44661f79cc7832468f4312b",
+      "sha256": "5212cf58b12a9149446c2b3fd596e27cfe5e4b97984fddf8e35a1185804ddc6b",
       "classification": "template-publico"
     },
     {
       "path": "03_documentos/emenda-refinamentos-20261027.md",
       "sha256": "4d33bd0d3e4f998bec6e39a2066ba503b3f9ac212a5ac107e638d88dabc3144b",
+      "classification": "template-publico"
+    },
+    {
+      "path": "03_documentos/emenda-sem-kommo-20261027.md",
+      "sha256": "dae230f8122ebeae571eb74d8a1dee47f0c8337c3cf48861cf5e4f4e85b212c9",
+      "classification": "template-publico"
+    },
+    {
+      "path": "03_documentos/direcao-encerramento-20261027.md",
+      "sha256": "cd383894944889b57346e491a7506fcabbf78f2893c45fea6b95310a15a333fc",
       "classification": "template-publico"
     }
   ],
@@ -90,5 +100,10 @@
     "newTopLevelTasks": 12,
     "status": "documental; implementação pendente",
     "originalCardsPreserved": true
-  }
+  },
+  "amendmentKommo": {
+    "id": "E-F4-KOMMO-20261027",
+    "status": "integração suspensa; fontes locais; CRM futuro não autorizado"
+  },
+  "directionConfirmedAt": "2026-10-27T17:43:00-03:00"
 }

@@ -96,3 +96,18 @@
 - Atualizados índice, STATUS e orientação de retomada. Oito cards originais e subtarefa preservados byte a byte; fases encerradas e SPECs anteriores não alteradas.
 - Insumos coletados nas próprias tasks; pontuação não é elegibilidade, rótulo não é estado. Fila permanece relato a reproduzir, não defeito já corrigido.
 - Publicação apenas documental; integração mantém seus gates. App, base e produção intocados.
+
+
+## 2026-10-27 — E-F4-KOMMO-20261027
+
+- 4ª call relida via Drive, encaminhamento final 18:03–21:31 e instrução Ramon 17:38 aplicados.
+- 4 cards de integração/painel + subtarefa suspensos (não concluídos); IDs preservados. Loop e recuperação somente com fontes locais, sem dependência conector; fechamento ajustado ao recorte.
+- 12 cards de refinamento e fases encerradas preservados. CRM próprio continua condicionado a novo recorte/prazo com Isabel. App/produção/conectores intocados.
+
+
+## 2026-10-27 17:43 — direção final de continuidade
+
+- Consultor confirmou refinamentos e conclusão da plataforma até a F5; novo mapeamento só depois, em outro processo.
+- STATUS e retomada ativos limpos; suspensões não geram cobrança de insumos nem bloqueiam as tasks locais.
+- F5 planejada ajustada no Plano para validar refinamentos e encerrar o conjunto; não liberada automaticamente.
+- Publicação documental autorizada; nenhuma implementação, migração ou mudança em produção.

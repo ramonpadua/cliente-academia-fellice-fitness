@@ -16,3 +16,8 @@ Somente o incremento ativo da Fase 4. Esta matriz aditiva não substitui nem alt
 | V05 | REF-10 / `25e13c7c-5c61-4503-a2b4-5edc6e4c1c0f` | SPEC-4-004 / REF-10 | CA-4-R10; Aceite/prova da seção REF-10 | Pendente |
 | Regressão I01 a I10, F01, V01 a V05 | REF-11 / `f58973d8-dbac-4a9f-8875-21ba4f90384d` | SPEC-4-004 / REF-11 | CA-4-R11; Aceite/prova da seção REF-11 | Pendente |
 | Aceite I01 a I10, F01, V01 a V05 | REF-12 / `28a0f522-8e5c-4873-ba85-5c61dcb8ce85` | SPEC-4-004 / REF-12 | CA-4-R12; Aceite/prova da seção REF-12 | Pendente |
+
+
+## Vigência sem Kommo
+
+E-F4-KOMMO-20261027: REF-01 a REF-12 e critérios CA-4-R01 a R12 preservados. Integração e painel externo suspensos, não concluídos. Loop/revisão com fontes locais e sem dependência de conector. Detalhe em `03_documentos/emenda-sem-kommo-20261027.md` na raiz do projeto.

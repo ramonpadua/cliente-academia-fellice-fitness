@@ -1,32 +1,29 @@
 # Status do plano
 
+## Direção vigente — confirmação do consultor em 27/10/2026 17:43
+
+Objetivo único das etapas restantes: refinar, validar e concluir a plataforma atual. Executar REF-01 a REF-12, depois os controles locais de qualidade/conversão previstos na fase 4, e finalizar com validação ponta a ponta e encerramento na fase 5. Novo mapeamento somente APÓS concluir a fase 5, em outro processo, sem entrega adicional presumida neste plano.
+
+Não solicitar credenciais, desenhar integrações externas ou inserir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
+
+Uma implementação por vez, insumos operacionais perguntados à cliente na própria task, prova técnica e teste humano explícito. Primeira ação: REF-01, diagnóstico da Fila. Prazos a combinar. Nada é marcado concluído por esta atualização documental.
+
 ## Estado atual
 
-- **Fase atual:** Fase 4 — integração direta e loop de saúde da conversão. Promovida em 01/10/2026 após aprovação das SPECs pelo consultor e autorização da promoção da fase. Unidade ativa: SPEC-4-001..003 + Jornada com 8 tasks + 1 subtarefa.
-- **Progresso da Fase 4:** 0/8 tasks concluídas. A task `7953f975` (“Definir contrato, acesso e fallback da integração”) permanece ativa e **bloqueada**; em 13/10/2026 às 16:25 (America/Bahia) Ricardo respondeu ao roteiro de confirmação B4 (direção relatada Skip → Kommo; prevalência de conflito: nada se sobrescreve, com reconciliação humana; identificador externo e escopo da fusão ainda a definir; base legal indicada: Consentimento; conta de teste segregada ainda indisponível), mas a evidência apresentada (“Karol - 13/10/2026”) não atende ao padrão exigido — sem citação literal e sem hora — e os gates B4-01/02/05 seguem pendentes.
-- **Gate anterior:** Fase 3 encerrada em 2026-09-30 — 9/9 tasks; SPEC-3-001 e SPEC-3-002 aceitas sem ressalva pelo consultor; Fase 3 arquivada em `05_entregas/fase-3/`.
-- **Gate atual:** B4-01 pendente: base legal “Consentimento” indicada apenas como relato de Ricardo (13/10), sem validação do responsável interno por privacidade/LGPD nem confirmação verificável do Champion; escopo de escrita não informado. B4-02 pendente: direção Skip → Kommo relatada sem evidência direta; conta de teste segregada ainda não disponível (a conta Kommo informada não é de teste); permissões e prova técnica não validadas. Não acessar contas não-testes. B4-05 pendente: direção e prevalência de conflito relatadas sem evidência direta; escopo do “todo o histórico” da fusão e identificador externo ainda a definir; sem confirmação verificável do Comercial; não mesclar histórico enquanto isso persistir.
-- **Dúvida residual de execução:** a direção Skip → Kommo foi relatada por Ricardo em 13/10/2026 atribuída à Champion, sem citação literal; o papel de cada sistema campo a campo e o descarte explícito de Lovable ainda não estão documentados por fonte direta. Não presumir a direção nem alterar a SPEC. Produção não publicada.
+- Fase atual: 4 — refinamentos da plataforma e validação/conversão local.
+- Entregas anteriores: fases 1 a 3 encerradas, arquivos e aceites preservados.
+- Cards preservados: 20 de topo; 12 refinamentos + 4 cards locais (baseline, loop, ciclo, revisão final) pendentes; 4 cards suspensos fora do recorte de execução. Nenhum novo aceite registrado.
+- Execução técnica, banco e produção não alterados nesta publicação.
 
-## Decisões concluídas
+## Sequência restante
 
-- **B3-01..B3-05 (Fase 3):** taxonomia, métrica norte, vínculo triagem→agendamento, matriz de acesso e critério do baseline foram decididos na Fase 3.
-- **SPEC-3-001 e SPEC-3-002:** aceitas sem ressalva em 28/09 e 30/09/2026.
-- **SPECs da Fase 4 (SPEC-4-001..003):** aprovadas pelo consultor em 30/09/2026.
-
-## Ressalvas do fechamento da Fase 3
-
-- Baseline operacional não congelado (Champion → B4-04 antes da ativação do loop); LGPD/autorização de escrita externa (Champion → B4-01); RN-2.06 e capacidade do sábado (Champion, F5 ou ciclo futuro); export sanitizado (task própria se virar requisito).
+1. REF-01 a REF-10: corrigir e refinar formulário, dados, mídia, priorização, agendamento, Fila e Visão, conforme decisões confirmadas nas próprias tasks.
+2. REF-11 e REF-12: regressão do conjunto e aceite da cliente, sem avançar em falha.
+3. Baseline/alvo e ciclo local: medir fontes locais autorizadas, registrar cobertura/limitações e veredito humano. Não inventar dados ou declarar ganho sem evidência.
+4. Revisão da fase 4 pelo consultor, considerando somente o recorte vigente.
+5. Fase 5, planejada e não liberada automaticamente: regressão de todo o sistema, segurança/privacidade/rollback, medição, registro de limitações e decisão humana de encerramento.
+6. Depois da fase 5 concluída: novo mapeamento, em outro processo, fora das tasks atuais.
 
 ## Próxima ação
 
-Obter a citação literal com data/hora da mensagem original da Champion (confirmação do destino e da direção Skip → Kommo) e do Comercial (regra de unificação — B4-05); criar conta de teste segregada para a prova técnica (B4-02) e validar a base legal “Consentimento” com o responsável por privacidade/LGPD (B4-01). Até lá, manter a task bloqueada e não acessar contas que não sejam de teste nem realizar escrita externa.
-
-
-## Emenda E-F4-REF-20261027 — aprovada em 27/10/2026 17:25
-
-Ramon aprovou a proposta e autorizou atualizar documentos e publicar os cards. Acrescentadas SPEC-4-004 e REF-01 a REF-12 para os 16 pedidos de formulário/Fila/Visão; todos pendentes. F4 permanece atual: oito tasks originais + 12 novas = 20 tasks de topo (0/20 concluídas); a subtarefa original não entra no denominador. Não houve implementação nem teste do app nesta publicação.
-
-Tasks e SPECs anteriores preservadas; fases encerradas intocadas. O bloqueio da integração 7953f975 permanece; não precisa ser vencido para diagnosticar os refinamentos locais. Nenhum CRM, conta externa, credencial, escrita no banco ou publicação de produção autorizados pela emenda.
-
-**Próxima ação segura:** iniciar REF-01 em diagnóstico somente leitura, confirmar com a cliente qual Fila e reproduzir o sintoma. Depois seguir REF-02, respeitando uma implementação por vez, decisões dentro dos cards e teste humano antes de avançar. A integração tem uma fila de trabalho separada: não executá-la em paralelo ao refinamento.
+REF-01: confirmar com a cliente a Fila afetada, reproduzir o sintoma em ambiente autorizado, apresentar diagnóstico e executar somente o recorte aprovado. Após prova técnica, pedir teste humano antes de avançar. Nenhuma conta externa é pré-requisito.

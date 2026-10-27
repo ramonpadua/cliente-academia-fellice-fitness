@@ -1,3 +1,11 @@
+## Direção vigente — confirmação do consultor em 27/10/2026 17:43
+
+Objetivo único das etapas restantes: refinar, validar e concluir a plataforma atual. Executar REF-01 a REF-12, depois os controles locais de qualidade/conversão previstos na fase 4, e finalizar com validação ponta a ponta e encerramento na fase 5. Novo mapeamento somente APÓS concluir a fase 5, em outro processo, sem entrega adicional presumida neste plano.
+
+Não solicitar credenciais, desenhar integrações externas ou inserir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
+
+Uma implementação por vez, insumos operacionais perguntados à cliente na própria task, prova técnica e teste humano explícito. Primeira ação: REF-01, diagnóstico da Fila. Prazos a combinar. Nada é marcado concluído por esta atualização documental.
+
 # Decisões da Fase 4 — Integração direta e saúde da conversão
 
 **Estado deste registro:** decisões B4 registradas em 16/10/2026 por Ricardo (consultor) como decisão operacional da task `7953f975` — B4-01 REGISTRADA COM PENDÊNCIA (responsável interno por privacidade/LGPD e data da validação não informados); B4-02 REGISTRADA COM PENDÊNCIA (existência da conta Kommo de teste segregada ainda não confirmada); B4-05 REGISTRADA COM PENDÊNCIA (falta citação literal com data e hora da Champion (Karol) e do Comercial). Execução técnica NÃO liberada: nenhuma coleção do PocketBase foi escrita, nenhuma conta externa acessada, nenhuma credencial criada, nenhuma prova técnica executada. A evidência de 13/10 (“Karol - 13/10/2026”) continua não atendendo ao padrão exigido; os registros de 16/10 não a substituem — as aprovações exigidas (B4-05) e as confirmações pendentes (B4-01, B4-02) continuam abertas.
