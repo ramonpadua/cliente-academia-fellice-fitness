@@ -12,12 +12,12 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 - Fase atual: 4 — refinamentos da plataforma e validação/conversão local.
 - Entregas anteriores: fases 1 a 3 encerradas, arquivos e aceites preservados.
-- Cards preservados: 20 de topo; 12 refinamentos + 4 cards locais (baseline, loop, ciclo, revisão final) pendentes; 4 cards suspensos fora do recorte de execução. Nenhum novo aceite registrado.
-- Execução técnica, banco e produção não alterados nesta publicação.
+- Cards preservados: 20 de topo; 12 refinamentos + 4 cards locais (baseline, loop, ciclo, revisão final) pendentes; 4 cards suspensos fora do recorte de execução. **REF-02 concluída em 29/10/2026 com teste humano aprovado; REF-01 segue aberta (erro não reproduzido, diagnóstico inconclusivo por SPEC). Nenhum outro aceite registrado.**
+- Execução técnica: Skip v0.0.92 (commit `db03c5f`) no preview; produção não publicada. Banco alterado apenas por dados sintéticos de teste (2 submissões + 1 agendamento), pendentes de limpeza por migração.
 
 ## Sequência restante
 
-1. REF-01 a REF-10: corrigir e refinar formulário, dados, mídia, priorização, agendamento, Fila e Visão, conforme decisões confirmadas nas próprias tasks.
+1. REF-01 a REF-10: corrigir e refinar formulário, dados, mídia, priorização, agendamento, Fila e Visão, conforme decisões confirmadas nas próprias tasks. (REF-02 concluída 29/10.)
 2. REF-11 e REF-12: regressão do conjunto e aceite da cliente, sem avançar em falha.
 3. Baseline/alvo e ciclo local: medir fontes locais autorizadas, registrar cobertura/limitações e veredito humano. Não inventar dados ou declarar ganho sem evidência.
 4. Revisão da fase 4 pelo consultor, considerando somente o recorte vigente.
@@ -26,4 +26,4 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## Próxima ação
 
-REF-01: confirmar com a cliente a Fila afetada, reproduzir o sintoma em ambiente autorizado, apresentar diagnóstico e executar somente o recorte aprovado. Após prova técnica, pedir teste humano antes de avançar. Nenhuma conta externa é pré-requisito.
+REF-03 (Atualizar as opções de rotina e a pergunta de profissão) — pré-condição REF-02 aceita, agora satisfeita; insumos (lista CLT e obrigatoriedade da pergunta secundária) coletados na própria task. Alternativa: retomar REF-01 se a Fila voltar a falhar. Nenhuma conta externa é pré-requisito.
