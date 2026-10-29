@@ -10,25 +10,32 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## Controle do orquestrador
 
-- task_id: 3c9a7ea2-63fd-4aa5-a370-cdc04e796456 (REF-01 — Entender e corrigir a abertura da Fila)
+- task_id: ce389a55-5a06-4dbe-b3d6-4516d17a0968 (REF-02 — Levar as respostas já preenchidas até o agendamento)
 - champion: Karol e Márcio
-- spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-01)
+- spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-02)
 - etapa: aguardando_autorizacao
 - autorizacao_implementacao: ausente
+- insumo_pendente: quais campos a cliente redigitou no agendamento e quando o dado se perde (avançar, voltar, recarregar ou reabrir)
 - teste_humano: pendente
-- verificacao_automatica: passou (diagnóstico somente leitura 29/10/2026 15:05 — preview, bundle e backend; nenhuma escrita no produto)
+- verificacao_automatica: passou (diagnósticos somente leitura 29/10 — Fila e fluxo triagem→agendamento; nenhuma escrita no produto)
 - aprendizado: pendente
-- ultima_acao: diagnóstico somente leitura da Fila concluído; nenhuma alteração de código, dado ou permissão
-- proxima_acao: receber os insumos da cliente (tela/link, papel, aparelho, passos e mensagem de erro) para fechar a causa
-- atualizado_em: 2026-10-29T15:20:00-03:00
+- ultima_acao: diagnóstico REF-02 concluído; causa estrutural identificada no código (páginas não compartilham estado nem identificador)
+- proxima_acao: aguardar insumo da cliente e autorização para implementar o recorte REF-02
+- atualizado_em: 2026-10-29T15:35:00-03:00
 
-## Diagnóstico REF-01 — resumo sanitizado (29/10/2026)
+## REF-01 — Fila (ABERTA, não corrigida)
 
-- Fila abre no preview: rota `/fila` responde HTTP 200 e renderiza a tela de acesso do atendente; o componente da Fila está íntegro no bundle publicado.
-- Gate de papel divergente: a Fila aceita somente `champion` e `consultor`; a Visão aceita também `gestao` e `supervisora`. Usuário de gestão ou supervisão é recusado na Fila com mensagem genérica.
-- Não existe link de navegação para `/fila` em nenhuma tela; o único acesso é por URL digitada.
-- Produção responde 404 (ainda não publicada); todas as rotas do preview respondem 200.
-- Leituras de `lead_handoffs` e `lead_appointments` responderam HTTP 200 sem autenticação, porém com 0 registros no momento do teste; `agenda_slots` retornou 2 registros de horário. O que está provado é a permissão de leitura aberta, não a exposição comprovada de dado pessoal.
-- Não reproduzido: caminho pós-login com usuário real, comportamento em móvel e a mensagem de erro exata relatada pela cliente.
+- Diagnóstico somente leitura 29/10: `/fila` abre no preview; gate da Fila aceita só `champion`/`consultor` (a Visão aceita também `gestao`/`supervisora`); nenhum link de navegação para `/fila` no app; produção 404; leitura de `lead_handoffs`/`lead_appointments` responde 200 sem autenticação, com 0 registros no teste (`agenda_slots` expôs 2 horários).
+- Relato da cliente em 29/10 (literal): "abrir novamente a fila e abriu, anteriormente estava aparecendo um erro. agora funcionou normalmente".
+- Status: ABERTA — erro não reproduzido; por especificação, diagnóstico inconclusivo e task não declarada corrigida. Se recorrer, coletar tela/link, papel, aparelho, passos e mensagem de erro, sem senha.
+
+## Diagnóstico REF-02 — resumo sanitizado (29/10/2026)
+
+- Triagem (Index.tsx, 7 etapas) salva `lead_submissions` + evento `TRIAGEM_CONCLUIDA` (telefone e e-mail no payload do evento) e oferece dois caminhos: WhatsApp externo e "Ver grade de horários" → `/agendar`.
+- `/agendar` (Agendar.tsx) não lê a submissão da triagem: o bloco "Seus dados" (nome, canal de retorno, localidade, profissão, e-mail opcional) começa vazio e um NOVO `lead_submission_id` é gerado a cada visita (`useRef(crypto.randomUUID())`).
+- Causa estrutural do relato I07: as duas páginas não compartilham estado nem identificador; o lead redigita no fim do agendamento o que já informou na triagem.
+- Efeito colateral previsto em B3-03: o agendamento não vincula à submissão da triagem (cobertura incompleta da métrica norte).
+- Plano mínimo proposto: o link da triagem para `/agendar` carrega o `lead_submission_id`; `/agendar` lê a submissão correspondente, pré-preenche nome/canal/localidade/profissão (e-mail quando disponível) e REUSA o mesmo `lead_submission_id`; sem localStorage; acesso direto sem triagem mantém o comportamento atual; falha de leitura mantém o formulário vazio sem indicar sucesso falso.
+- Pendente de insumo (começo interativo): quais campos a cliente redigitou e quando o problema ocorre. Persistência entre visitas NÃO está incluída no recorte.
 
 - fase_5: planejada, liberar somente pelo ritual após F4
