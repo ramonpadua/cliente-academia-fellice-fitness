@@ -13,15 +13,16 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - task_id: d2aebe4c-2a02-48dc-a4fa-3ec1519b2ace (REF-03 — Atualizar as opções de rotina e a pergunta de profissão)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-03)
-- etapa: aguardando_autorizacao
-- insumos_pendentes: (1) lista de profissões CLT para a pergunta secundária; (2) obrigatoriedade da pergunta secundária; (3) confirmação de que retirar as categorias gerais não exclui as profissões pedidas como Autônomo; (4) rótulo exibido para Executivo/Gestor ("Diretor ou alta gerência")
+- etapa: coletando_insumos
+- insumos_recebidos: (1) lista CLT — Ricardo, 29/10/2026 16:18, literal: "Assistente administrativo; vendedor; técnico enfermagem; médico; engenheiro; outros (se selecionar outros, colocar campo para escrever qual)" — texto livre aprovado para Outros do CLT; (2) obrigatoriedade — Ricardo, 29/10/2026 16:23, literal: "obrigatória para CLT e Autônomo"
+- insumos_pendentes: (3) confirmação de que retirar as categorias gerais não exclui as profissões pedidas como Autônomo; (4) rótulo exibido para Executivo/Gestor ("Diretor ou alta gerência")
 - autorizacao_implementacao: ausente
 - teste_humano: pendente
 - verificacao_automatica: pendente
 - aprendizado: pendente
-- ultima_acao: análise REF-03 concluída (leitura do código v0.0.92 e da SPEC); nenhuma alteração de produto
-- proxima_acao: coletar insumos da cliente (uma pergunta por vez) e aguardar autorização para implementar
-- atualizado_em: 2026-10-29T16:20:00-03:00
+- ultima_acao: insumos 1/4 (lista CLT) e 2/4 (secundária obrigatória) recebidos
+- proxima_acao: perguntar 3/4 (profissões do Autônomo)
+- atualizado_em: 2026-10-29T19:25:00Z
 
 ## REF-01 — Fila (ABERTA, não corrigida)
 
@@ -41,7 +42,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - Estado atual do código (v0.0.92): OCUPACOES tem 7 opções — CLT; Autônomo/Empresário (juntos); Executivo/Gestor; Estudante; Aposentado; "Profissional da saúde, educação ou outra área com horário irregular" (categorias genéricas); "Prefiro não informar". Não existe pergunta secundária de profissão.
 - Valor interno = rótulo hoje (ex.: o que vai para `ocupacao` é "CLT", "Autônomo/Empresário"...). Mudanças de lista alteram valores futuros; histórico antigo continua legível (texto puro), sem recálculo (regra 5 da SPEC).
 - Contrato da SPEC: Autônomo e Empresário separados; categorias genéricas retiradas; Executivo/Gestor exibido como "Diretor ou alta gerência"; CLT e Autônomo abrem pergunta secundária pertinente; "Outros" não coleta texto livre sem aprovação; não inventar profissões.
-- Insumos bloqueantes da implementação: lista CLT; obrigatoriedade da secundária; confirmação de que retirar as genéricas não exclui as profissões pedidas como Autônomo; rótulo do Executivo/Gestor.
+- Insumos bloqueantes da implementação: lista CLT (recebida 1/4); obrigatoriedade da secundária (recebida 2/4); confirmação de que retirar as genéricas não exclui as profissões pedidas como Autônomo; rótulo do Executivo/Gestor.
 - Recorte técnico previsto: ajuste de OCUPACOES + pergunta secundária condicional no Index.tsx; transporte do contexto para /agendar (REF-02) atualizado se a profissão passar a ser coletada na triagem; nenhuma migração (campo ocupacao é texto); versão do formulário registrada.
 
 - fase_5: planejada, liberar somente pelo ritual após F4
