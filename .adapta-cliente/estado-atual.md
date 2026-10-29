@@ -13,14 +13,14 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - task_id: ce389a55-5a06-4dbe-b3d6-4516d17a0968 (REF-02 — Levar as respostas já preenchidas até o agendamento)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-02)
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente
-- teste_humano: pendente — reteste de 29/10 REPRODUZIU o defeito (RED confirmado pelo operador): "Seus dados" chega vazio após escolher horário
-- verificacao_automatica: passou (diagnóstico 29/10 15:00 + revalidação 15:40; bundle byte-conferido; código publicado mantém formulário vazio e novo lead_submission_id)
+- etapa: implementando
+- autorizacao_implementacao: confirmada — Ricardo, 29/10/2026 ~15:45, mensagem literal "pode implementar" (após relatório de análise e RED reproduzido)
+- teste_humano: pendente
+- verificacao_automatica: pendente (RED confirmado pelo operador em 29/10 ~15:45: "Seus dados" chega vazio)
 - aprendizado: pendente
-- ultima_acao: reteste do operador confirmou o defeito I07; diagnóstico REF-02 validado
-- proxima_acao: aguardar autorização para implementar o recorte REF-02 (plano já apresentado)
-- atualizado_em: 2026-10-29T15:45:00-03:00
+- ultima_acao: autorização registrada; preparação da implementação (acesso de escrita ao Skip Builder)
+- proxima_acao: implementar o recorte REF-02 e executar verificações automáticas
+- atualizado_em: 2026-10-29T15:50:00-03:00
 
 ## REF-01 — Fila (ABERTA, não corrigida)
 
@@ -34,7 +34,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - `/agendar` (Agendar.tsx) não lê a submissão da triagem: o bloco "Seus dados" (nome, canal de retorno, localidade, profissão, e-mail opcional) começa vazio e um NOVO `lead_submission_id` é gerado a cada visita (`useRef(crypto.randomUUID())`).
 - Causa estrutural do relato I07: as duas páginas não compartilham estado nem identificador; o lead redigita no fim do agendamento o que já informou na triagem.
 - Efeito colateral previsto em B3-03: o agendamento não vincula à submissão da triagem (cobertura incompleta da métrica norte).
-- Plano mínimo proposto: o link da triagem para `/agendar` carrega o `lead_submission_id`; `/agendar` lê a submissão correspondente, pré-preenche nome/canal/localidade/profissão (e-mail quando disponível) e REUSA o mesmo `lead_submission_id`; sem localStorage; acesso direto sem triagem mantém o comportamento atual; falha de leitura mantém o formulário vazio sem indicar sucesso falso.
-- Reteste do operador (29/10 ~15:45): CONFIRMA o defeito — após triagem e escolha de horário, "Seus dados" chega vazio (nome, canal, localidade, profissão, e-mail com placeholder). RED reproduzido; diagnóstico validado. Observação de ambiente: a grade exibe datas de setembro (fixtures), sem efeito neste teste. Persistência entre visitas segue fora do recorte.
+- Reteste do operador (29/10 ~15:45): CONFIRMA o defeito — após triagem e escolha de horário, "Seus dados" chega vazio. RED reproduzido; diagnóstico validado.
+- Ajuste de mecanismo autorizado no recorte: leitura da submissão por API é impossível sem autenticação (`lead_submissions` responde 403 a anônimo) e abrir essa leitura exigiria mudança de regra de acesso (fora do recorte). O transporte dos dados da triagem para o agendamento será pelo estado de navegação do roteador (mesma sessão de atendimento, sem dados na URL, sem armazenamento), preservando o mesmo `lead_submission_id`. Acesso direto sem triagem mantém o comportamento atual; falha mantém o formulário vazio sem sucesso falso.
 
 - fase_5: planejada, liberar somente pelo ritual após F4
