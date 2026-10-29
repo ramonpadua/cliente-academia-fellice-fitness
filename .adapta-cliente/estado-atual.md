@@ -15,12 +15,12 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-02)
 - etapa: aguardando_autorizacao
 - autorizacao_implementacao: ausente
-- teste_humano: pendente — relato de 29/10 não demonstra o critério CA-4-R02 (evidência anexada mostra a tela de sucesso da TRIAGEM, não a etapa "Seus dados" do AGENDAMENTO)
-- verificacao_automatica: passou (revalidação 29/10 15:40 — bundle publicado byte-idêntico ao diagnóstico das 15:00, hash conferido; estado inicial de "Seus dados" vazio no código; /agendar não lê URL nem armazenamento)
+- teste_humano: pendente — reteste de 29/10 REPRODUZIU o defeito (RED confirmado pelo operador): "Seus dados" chega vazio após escolher horário
+- verificacao_automatica: passou (diagnóstico 29/10 15:00 + revalidação 15:40; bundle byte-conferido; código publicado mantém formulário vazio e novo lead_submission_id)
 - aprendizado: pendente
-- ultima_acao: revalidação do fechamento REF-02 não confirmou o critério de aceite; divergência registrada
-- proxima_acao: pedir reteste específico — triagem → "Ver grade de horários" → escolher horário → verificar se "Seus dados" chega preenchido
-- atualizado_em: 2026-10-29T15:40:00-03:00
+- ultima_acao: reteste do operador confirmou o defeito I07; diagnóstico REF-02 validado
+- proxima_acao: aguardar autorização para implementar o recorte REF-02 (plano já apresentado)
+- atualizado_em: 2026-10-29T15:45:00-03:00
 
 ## REF-01 — Fila (ABERTA, não corrigida)
 
@@ -35,6 +35,6 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - Causa estrutural do relato I07: as duas páginas não compartilham estado nem identificador; o lead redigita no fim do agendamento o que já informou na triagem.
 - Efeito colateral previsto em B3-03: o agendamento não vincula à submissão da triagem (cobertura incompleta da métrica norte).
 - Plano mínimo proposto: o link da triagem para `/agendar` carrega o `lead_submission_id`; `/agendar` lê a submissão correspondente, pré-preenche nome/canal/localidade/profissão (e-mail quando disponível) e REUSA o mesmo `lead_submission_id`; sem localStorage; acesso direto sem triagem mantém o comportamento atual; falha de leitura mantém o formulário vazio sem indicar sucesso falso.
-- Revalidação do relato "já corrigida" (29/10 15:40): bundle publicado `index-Bv9Xt6WP.js` byte-idêntico ao do diagnóstico (2.711.273 bytes); estado inicial de "Seus dados" segue vazio no código publicado; `/agendar` não lê parâmetros de URL nem armazenamento. Evidência anexada pelo operador mostra a tela de sucesso da triagem ("Resumo da sua triagem"), que sempre exibiu os dados — não demonstra o critério CA-4-R02. Hipótese a descartar no reteste: preenchimento automático do navegador (autofill) no dispositivo do testador.
+- Reteste do operador (29/10 ~15:45): CONFIRMA o defeito — após triagem e escolha de horário, "Seus dados" chega vazio (nome, canal, localidade, profissão, e-mail com placeholder). RED reproduzido; diagnóstico validado. Observação de ambiente: a grade exibe datas de setembro (fixtures), sem efeito neste teste. Persistência entre visitas segue fora do recorte.
 
 - fase_5: planejada, liberar somente pelo ritual após F4
