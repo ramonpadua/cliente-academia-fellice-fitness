@@ -8,58 +8,6 @@
 - Teste humano: aprovado pelo operador Ricardo em 29/10/2026 (~16:00, mensagem literal "Teste OK — 'Seus dados' veio preenchido"), após RED reproduzido pelo mesmo operador no mesmo dia.
 - REF-01 segue ABERTA (erro não reproduzido; diagnóstico inconclusivo por SPEC). Pendências: limpeza das submissões sintéticas de teste em `lead_submissions` + 1 agendamento de teste; produção permanece não publicada (autorização separada).
 
-## 2026-10-27 17:51 — instruções de entrada alinhadas
-
-- README, CLAUDE e AGENTS corrigidos para a Fase 4 atual e retomada pela REF-01; referências de entrada às fases anteriores removidas.
-- Sem mudança de fase, tarefa, status de execução ou aceite. Orientações para coleta de insumos e teste humano consistentes.
-- Nenhuma execução automática ou atualização de sessão aberta é presumida pela publicação documental.
-
-## 2026-10-27 17:43 — direção final de continuidade
-
-- Consultor confirmou refinamentos e conclusão da plataforma até a F5; novo mapeamento só depois, em outro processo.
-- STATUS e retomada ativos limpos; suspensões não geram cobrança de insumos nem bloqueiam as tasks locais.
-- F5 planejada ajustada no Plano para validar refinamentos e encerrar o conjunto; não liberada automaticamente.
-- Publicação documental autorizada; nenhuma implementação, migração ou mudança em produção.
-
-## 2026-10-27 — E-F4-KOMMO-20261027
-
-- Recorte vigente: refinar, validar e concluir a plataforma atual (REF-01 a REF-12), depois baseline/alvo, loop e ciclo com fontes locais, e revisão do consultor. Fase 5 planejada e não liberada automaticamente.
-- Integração Kommo, painel de integração e subtarefa de conector SUSPENSOS (não concluídos): fora do recorte, sem execução, sem insumos, sem credenciais; preservados para rastreabilidade.
-- Task 7953f975 e decisões B4 fora do recorte; não pedir insumos B4. Loop/revisão passam a usar somente fontes locais.
-- Nada é marcado concluído por esta emenda; prazos a combinar.
-
-## 2026-10-27 — Emenda E-F4-REF-20261027
-
-- 12 cards de refinamento publicados (REF-01 a REF-12) a partir de `pontos_de_melhoria.docx` (16 pedidos); SPEC-4-004 criada com contratos por task e critérios CA-4-R01..R12.
-- Aprovação do consultor em 27/10 17:25 ("Aprovo a proposta. Atualize os documentos e publique as novas tasks, preservando as concluídas.").
-- Cards anteriores preservados integralmente; fases encerradas e aceites intactos. Aprovação de documentação não equivale a execução ou aceite de produto.
-
-## 2026-10-16
-
-- Ciclo design system A+B concluído: `Index.tsx` migrado para shadcn/Tailwind (v0.0.89, commit `3a3bd99`), contrato de dados preservado; teste humano aprovado.
-- Registro B4 de 16/10 documentado em `03_documentos/decisoes-fase-4.md` (base legal, ferramenta/ambiente, mapeamento/unificação) com pendências explícitas; validação documental de Ricardo às 17:12.
-- Reparos de integridade aplicados (commits `b05de380`, `a2ac3467`, `956c1b35`); AP-2026-10-16-1600 (conferir size+blob SHA após todo commit via MCP) e AP-2026-10-16-1730 (fundação de design system ociosa) registrados em `06_notas/aprendizado-continuo/`.
-
-## 2026-10-13
-
-- Insumos B4 do Champion (relato de Ricardo) registrados como evidência indireta; confirmação literal com data/hora segue pendente.
-
-## 2026-10-09
-
-- Task 7953f975: respostas B4-01/02/05 registradas como decisão operacional do consultor, sem liberação de execução técnica; gates B4 seguem pendentes de confirmação do Champion.
-
-## 2026-10-02
-
-- Fase 3 encerrada: 9/9 tasks concluídas; SPEC-3-001/002 aceitas (28–30/09); check-fase-3 APROVADO COM RESSALVAS; transição F3→F4 preparada com SPECs 4-001/002/003 liberadas e tasks geradas em 01/10.
-
-## 2026-09-30
-
-- Fechamento da Fase 3 com aceite do Champion; baseline de conversão sem versão congelada registrado como ressalva (B3-05/B4-04).
-
-## 2026-09-24
-
-- Decisões F3-B3 registradas (taxonomia UTM, métrica norte, vínculo triagem→agendamento).
-
 ## 2026-08-20
 
 - Criado `03-Projeto/requisitos.md` pela rota padrão da análise crítica.
@@ -72,3 +20,109 @@
 - Criados a matriz de rastreabilidade e o controle interno `.adapta/checks/check-escopo.md` com status PENDENTE.
 - Registrada a revisão serial do escopo definitivo; aplicada correção segura de rastreabilidade para não reintroduzir requisitos fora do recorte de pré-agendamento.
 - Gerado `03-Projeto/03-Setup-Ethos/` em estado RASCUNHO, incluindo persona, sugestões de conectores, mapa operacional e dois loops candidatos sem ativação.
+
+## 2026-08-21
+
+- Registrada aprovação humana do escopo em `.adapta/checks/check-escopo.md`.
+- Geradas e revisadas as SPECs da Fase 1: captura/triagem rastreável (SPEC-1-001) e encaminhamento humano com contexto preservado (SPEC-1-002).
+- O painel serial confirmou que plataforma/publicação/consentimento, contrato final de campos, canal humano, distribuição/encerramento e permissões não constam nas fontes. As duas SPECs foram marcadas como bloqueadas para evitar decisões ou configurações inventadas.
+- Atualizados o índice da Fase 1, a matriz de rastreabilidade e o `STATUS.md`; tasks continuam vazias até o bloqueio ser resolvido e a etapa `gerar-tasks` ser autorizada.
+- Autorizada a primeira leva de tasks de desbloqueio: F1-T001 a F1-T006 registram, separadamente, plataforma/publicação, canal/cobertura, campos, consentimento, distribuição/encerramento e permissões. Todas permanecem bloqueadas até decisão humana, sem criar superfícies, contas, conectores ou publicação.
+- Criada e validada a pasta operacional local `../Cliente — Academia Fellice Fitness/`, contendo somente a base pública, tasks e SPECs da Fase 1; não foi criado repositório, commit, push, convite ou publicação.
+- Criado `03-Projeto/scorecard-comparativo-mapa-mental-r1.md` para comparar o mapa mental R1 recebido com o processo, sistemas e limites aprovados.
+
+## 2026-09-10
+
+- Registrada conclusão da Fase 1: F1-T001 a F1-T006 resolvidas com evidências humanas; gate da Fase 1 encerrado.
+- Geradas as SPECs da Fase 2: agenda de disponibilidade e reserva (SPEC-2-001) e visão operacional de tentativas (SPEC-2-002). Ambas marcadas como bloqueadas até resolução das tasks de desbloqueio.
+- O painel serial confirmou que grade de disponibilidade, duração, capacidade, responsável da agenda, campos mínimos de agendamento, papéis, permissões, regra de encaminhamento e critério de escalada não constam nas fontes. As duas SPECs foram marcadas como bloqueadas para evitar decisões ou configurações inventadas.
+- Autorizada a primeira leva de tasks de desbloqueio da Fase 2: F2-T001 a F2-T005 registram, separadamente, grade/duração/capacidade, responsável pela agenda, campos mínimos, papéis/permissões/regra de encaminhamento e critério de escalada. Todas permanecem bloqueadas até decisão humana, sem criar slots, agenda, contas, conectores ou publicação.
+- Atualizados o índice da Fase 2 (`00-INDICE.md`), as tarefas gerais da Fase 2 (`00-Tasks_Gerais.md`) e o `STATUS.md`; fase atual passa a ser Fase 2.
+
+## 2026-09-21
+
+- Registrado o encerramento da Fase 2: F2-T001..T005 (documentais, 16/09) e F2-IMP-001..009 (implementação, 17–21/09) concluídas com testes humanos; SPEC-2-001 ACEITA (17/09) e SPEC-2-002 ACEITA (21/09); implementação 9/9 no ambiente de teste, sem publicação em produção.
+- Registrado `.adapta/checks/check-fase-2.md` APROVADO COM RESSALVAS com o digest ativo do estado encerrado (active-sha256=9baf0925…, repo HEAD 1287e3d) e ressalvas com dono e prazo (LGPD, capacidade do sábado, vínculo triagem→agendamento, fortalecimento server-side do CA-2.03).
+- Mapeadas e decididas as evoluções do fechamento da F2 em `.adapta/evolucoes/delta-fase-3.md`: EV-F2-01 (vínculo triagem→agendamento) promovida a bloqueio B3-03 da Fase 3; LGPD, capacidade do sábado e CA-2.03 adiadas com dono e prazo; aprendizados técnicos registrados como notas de construção.
+- Geradas as SPECs da Fase 3 em modo onda: SPEC-3-001 (consolidação somente leitura dos eventos das fases 1 e 2 em funil com numerador/denominador/período e cobertura) e SPEC-3-002 (dashboard por formulário, versão e campanha com baseline congelado e matriz de acesso). Ambas bloqueadas por B3-01..B3-05 (taxonomia, fórmula/janela, vínculo, matriz de acesso, baseline).
+- Atualizados o índice da Fase 3, as tasks gerais da Fase 3, a matriz de rastreabilidade, a Jornada `fase_3.md` (4 tasks de decisão/fechamento com UUIDs preservados) e o `STATUS.md`; fase atual passa a ser Fase 3. Nenhuma task de implementação foi gerada; `gerar-tasks` aguarda aprovação das SPECs.
+
+## 2026-09-23
+
+- Registrada autorização do consultor para liberação da Fase 3 das SPECs da Fellice Fitness.
+- Publicadas SPEC-3-001 e SPEC-3-002 no repositório operacional do cliente (`Cliente — Academia Fellice Fitness/04_fase-atual/specs/`).
+- Autorizada a primeira leva de tarefas de desbloqueio da Fase 3: F3-T001 a F3-T005 registram taxonomia de origem/campanha, fórmula/janela da métrica norte, decisão de vínculo triagem-agendamento, matriz de acesso e critério de aprovação do baseline congelado. Todas permanecem bloqueadas até decisão humana, sem criar dashboard, agregações, banco ou publicação externa.
+- Atualizados o índice da Fase 3 (`00-INDICE.md`), as tarefas gerais da Fase 3 (`00-Tasks_Gerais.md`), a matriz de rastreabilidade e o `STATUS.md` no Plano; resolvidos arquivos duplicados de conflito.
+- Repositório do cliente atualizado com handoff-manifest v1 (Fase 3), `fase.md`, `STATUS.md` e `README.md`.
+
+## 2026-09-24
+
+- Por autorização humana registrada nesta sessão, as cinco tarefas de decisão da Fase 3 (B3-01 a B3-05) foram liberadas e atribuídas ao Champion do cliente.
+- Registrada a decisão P1: o Champion decide e registra taxonomia, fórmula/janela, vínculo triagem → agendamento, matriz de acesso e critério do baseline; Marketing/agência e Gestão podem ser consultados, mas não são aprovadores obrigatórios.
+- Criado `03-Projeto/decisoes-fase-3.md` como registro canônico dos cinco vereditos, com decisão, data e confirmação verificável obrigatórias. Atualizadas as duas SPECs, índice, matriz, tarefas gerais, cards canônicos e `STATUS.md`. A SPEC-3-001 continua bloqueada até B3-01..B3-03; a SPEC-3-002, até B3-01, B3-02, B3-04 e B3-05 mais o aceite da SPEC-3-001. Nenhuma permissão, integração, publicação ou dado de produção foi alterado.
+
+## 2026-09-30
+
+- Registrado o fechamento da Fase 3: 9/9 tasks concluídas; SPEC-3-001 e SPEC-3-002 ACEITAS SEM RESSALVA pelo consultor Navaar (28/09 e 30/09), com testes humanos do Champion registrados, QA v0.0.85 (`c41cf7c`) e runtime autenticado; produção não publicada. `.adapta/checks/check-fase-3.md` registrado APROVADO COM RESSALVAS com active-sha256=7bbfdac4e985eac699880e3539ab59e529db3636fc77c8eec4af10377652ede3 (repo HEAD `b1c045a`); ressalvas com dono e prazo (baseline não congelado, LGPD/escrita externa, RN-2.06, capacidade do sábado, export sanitizado).
+- Mapeadas as evoluções do fechamento da F3 em `.adapta/evolucoes/delta-fase-4.md`: EV-F3-01 (LGPD/autorização de escrita externa → B4-01), EV-F3-02 (baseline operacional não congelado → B4-04) e EV-F3-03 (matriz de acesso do painel de saúde → B4-03) propostas como bloqueios da Fase 4; EV-F3-04..06 propostas como adiadas/rejeitadas; EV-F3-07 (allowlist explícita como autoridade; migrations aditivas limpas) proposta como regra de construção. Decisão humana (aceitar/adiar/rejeitar) pendente.
+- Geradas as SPECs da Fase 4 em modo onda: SPEC-4-001 (integração direta com a ferramenta comercial — Kommo e/ou Lóvavel conforme capacidade validada; identificador externo, idempotência, fila de reconciliação e rollback), SPEC-4-002 (painel de saúde da integração e histórico somente-adição de alterações relevantes) e SPEC-4-003 (loop semanal de saúde da conversão com baseline, alvo aprovado e veredito humano). Bloqueios B4-01..B4-05 registrados no índice; nenhuma credencial, conector, escrita externa ou publicação de produção foi autorizada.
+- Registrada a aprovação do consultor sobre as três SPECs da Fase 4 ("libero todas as specs, pode executar") e geradas as tasks da Fase 4: 8 tasks + 1 subtarefa (5 UUIDs do portal preservados; 3 tasks novas aguardam UUID do sincronizador), com cobertura CA-4-001..014 = 14/14 e insumos do Champion (B4-01..B4-05 e alvo do loop) embutidos nos cards. Validador `phase-tasks.mjs` PASS.
+
+## 2026-10-01
+
+- 2026-10-01 · Navaar (consultor) · LIBERAÇÃO DA FASE 4: consultor aprovou as três SPECs da Fase 4 ("libero todas as specs, pode executar") e autorizou a promoção F3→F4 neste repositório ("Confirmo o push: promova a Fase 4 no repositório da Fellice"). Fase 3 arquivada em `05_entregas/fase-3/` (README, Jornada e as duas SPECs aceitas sem ressalva); SPECs F3 removidas da unidade ativa (histórico Git preserva). Unidade ativa promovida para a Fase 4: Jornada `04_fase-atual/fase.md` com 8 tasks + 1 subtarefa (5 UUIDs preservados: `7953f975`, `c86d168b`, `31dae29a`, `12bf95df`, `c5ccd038`; 3 tasks novas aguardam UUID do sincronizador), `00-Tasks_Gerais.md`, `specs/00-INDICE.md` e SPEC-4-001/002/003. Insumos do Champion (B4-01..B4-05, matriz do painel de saúde e alvo do loop) embutidos nos cards para registro em `03_documentos/decisoes-fase-4.md`. Nenhuma implementação, credencial, conector, escrita externa ou publicação de produção foi iniciada. Produção não publicada.
+
+## 2026-10-02
+
+- Ricardo Junior autorizou a implementação da task `7953f975` ("pode implementar") após análise e plano apresentados; estado persistente atualizado e task marcada em andamento.
+- Criado `03_documentos/decisoes-fase-4.md` como rascunho da task: inclui os espaços de decisão B4-01 (base legal, minimização e autorização de escrita), B4-02 (ferramenta, escopos e conta de teste) e B4-05 (mapeamento, identificador externo e conflitos), além das salvaguardas de falha, reconciliação, rollback e tratamento de segredos da SPEC-4-001. As decisões e confirmações verificáveis do Champion/Comercial permanecem pendentes; nenhum valor foi inferido.
+- Registrada a situação no `STATUS.md` e na Jornada da Fase 4: 0/8 tasks concluídas, `7953f975` em andamento. Nenhuma credencial, conector, escrita externa ou publicação foi ativada; task aguarda respostas/validação humana para completar seu critério documental.
+- 2026-10-02 · Ricardo Junior · DEBUG task `7953f975`: regravação de documentos cumulativos alterou texto histórico; changelog reconstruído diretamente do blob-base verificado. Diff revisado; nenhuma entrada histórica foi alterada.
+
+## 2026-10-09
+
+- Ricardo forneceu insumos parciais para B4-01/02/05 na task `7953f975`; atualizados `03_documentos/decisoes-fase-4.md` e `STATUS.md`. A base legal, ferramenta secundária, disponibilidade/permissões e prova da conta de teste, mapeamento final, identificador externo e aprovações verificáveis permanecem pendentes; nenhuma credencial, conector ou escrita externa foi ativada.
+- Ricardo Junior revisou e aprovou o registro parcial de B4-01/02/05; a aprovação se restringe à revisão documental e não altera os gates pendentes nem autoriza credenciais, conector ou escrita externa.
+- Correção de integridade do changelog: após detectar conteúdo provisório indevido no commit `7dc86ba`, o histórico foi restaurado a partir da versão integral verificada em `69e22f3`; abaixo ficam somente entradas aditivas referentes às respostas desta data.
+- Ricardo respondeu ao formulário da task `7953f975` às 15:50: B4-01 base legal e escopo de escrita PENDENTES; ferramentas pretendidas Kommo + Lovable; há contas, mas não são de teste; permissões e prova técnica PENDENTES; destino descrito como Lovable ou a própria plataforma no Skip; identificador externo PENDENTE; regra relatada como aprovada: conferir nome completo e telefone e, se iguais, unificar todo o histórico. Nenhuma conta foi acessada nem houve leitura, escrita ou teste.
+- DÚVIDA bloqueante: a SPEC-4-001 prevê Kommo e/ou Lóvavel, mas as respostas citam Lovable e a plataforma Skip como possíveis destinos. Confirmar escopo/destino com o consultor/Champion antes de alterar SPEC ou executar. A regra de mesclagem carece de aprovadores/evidência verificáveis e de semântica segura, auditável e reversível; não mesclar histórico enquanto isso estiver pendente.
+- Às 16:07 (America/Bahia), Ricardo declarou “Revisei e aprovo somente como registro parcial”. Registrei a aprovação documental limitada nos artefatos da task; B4-01/02/05 permanecem pendentes, a DÚVIDA de escopo continua bloqueante e nenhuma conta, credencial, conector, teste ou escrita externa foi ativada.
+- Às 16:24 (America/Bahia), Ricardo informou Kommo + plataforma Skip como destino e atribuiu a decisão e a aprovação da regra de unificação (nome completo + telefone → unificar histórico) a Karol/Champion em 09/10. Registro como relato de Ricardo, sem mensagem original da Champion nem confirmação verificável do Comercial; direção, mapeamento, chave, escopo/auditoria/rollback e demais gates seguem pendentes. Nenhuma conta foi acessada nem houve teste ou escrita externa.
+
+## 2026-10-13
+
+- Ricardo respondeu ao roteiro de confirmação B4 da task `7953f975` às 16:25 (America/Bahia): direção relatada Skip → Kommo (lead nasce no Skip; Kommo espelha para o comercial); escopo do “todo o histórico” da fusão ainda a definir; prevalência em conflito: nada se sobrescreve, com conflito encaminhado a reconciliação humana; identificador externo ainda a definir, com nome completo + telefone restrito a critério de busca; base legal indicada: Consentimento (B4-01); conta de teste segregada ainda não disponível — criar antes da prova técnica (B4-02). Evidência apresentada (“Karol - 13/10/2026”) não atende ao padrão exigido (citação literal com data/hora); itens registrados como relato de Ricardo atribuído à Champion, sem confirmação do Comercial. B4-01/02/05 seguem pendentes e a task permanece bloqueada; atualizados `03_documentos/decisoes-fase-4.md` e `STATUS.md`. Nenhuma conta foi acessada nem houve teste ou escrita externa.
+
+## 2026-10-16
+
+- Ciclo paralelo de design system (fora da task `7953f975`, que segue bloqueada nas decisões B4-01/02/05): Ricardo autorizou escopo "formulário + páginas internas", tema claro + escuro completos e implementação em paralelo com a Fase 4. Fase A concluída: tema Fellice nos tokens de `src/main.css` (laranja 21 90% 48% como `--primary` no claro, 25 95% 53% no escuro, fundo creme 30 98% 98%, raio 0.75rem). Fase B concluída: `src/pages/Index.tsx` migrado para shadcn/ui (Form, Input, Select, Checkbox, Button) com react-hook-form + zod e mensagens de erro por campo; contrato de dados preservado (form_id `fellice-captura-01`, form_version `v1.0.0`, eventos FORM_STARTED/TRIAGEM_CONCLUIDA/HANDOFF_CREATED, UTM, consentimento). QA Skip completo passou (setup, estática, build, integrações) em v0.0.89 (commit `3a3bd99`); provas no preview: renderização, validação vazia, popover do select, modo escuro. Teste humano de Ricardo aprovado ("Testei e funcionou", 16/10). Submissão real de teste não foi realizada; nenhuma limpeza necessária. Nada foi publicado em produção; nenhuma coleção, hook ou migração alterada.
+
+## 2026-10-27 — Emenda E-F4-REF-20261027
+
+- Aprovação explícita do consultor Ramon às 17:25 para atualizar documentos e publicar refinamentos.
+- Acrescentadas `04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md`, 12 cards com UUIDs únicos e pendentes em `04_fase-atual/fase.md`, tabela operacional e `04_fase-atual/matriz-rastreabilidade-emenda-20261027.md`. Cobertura dos 16 pedidos da cliente.
+- Atualizados índice, STATUS e orientação de retomada. Oito cards originais e subtarefa preservados byte a byte; fases encerradas e SPECs anteriores não alteradas.
+- Insumos coletados nas próprias tasks; pontuação não é elegibilidade, rótulo não é estado. Fila permanece relato a reproduzir, não defeito já corrigido.
+- Publicação apenas documental; integração mantém seus gates. App, base e produção intocados.
+
+
+## 2026-10-27 — E-F4-KOMMO-20261027
+
+- 4ª call relida via Drive, encaminhamento final 18:03–21:31 e instrução Ramon 17:38 aplicados.
+- 4 cards de integração/painel + subtarefa suspensos (não concluídos); IDs preservados. Loop e recuperação somente com fontes locais, sem dependência conector; fechamento ajustado ao recorte.
+- 12 cards de refinamento e fases encerradas preservados. CRM próprio continua condicionado a novo recorte/prazo com Isabel. App/produção/conectores intocados.
+
+
+## 2026-10-27 17:43 — direção final de continuidade
+
+- Consultor confirmou refinamentos e conclusão da plataforma até a F5; novo mapeamento só depois, em outro processo.
+- STATUS e retomada ativos limpos; suspensões não geram cobrança de insumos nem bloqueiam as tasks locais.
+- F5 planejada ajustada no Plano para validar refinamentos e encerrar o conjunto; não liberada automaticamente.
+- Publicação documental autorizada; nenhuma implementação, migração ou mudança em produção.
+
+
+## 2026-10-27 17:51 — instruções de entrada alinhadas
+
+- README, CLAUDE e AGENTS corrigidos para a Fase 4 atual e retomada pela REF-01; referências de entrada às fases anteriores removidas.
+- Sem mudança de fase, tarefa, status de execução ou aceite. Orientações para coleta de insumos e teste humano consistentes.
+- Nenhuma execução automática ou atualização de sessão aberta é presumida pela publicação documental.
