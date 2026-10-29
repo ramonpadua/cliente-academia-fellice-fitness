@@ -32,7 +32,7 @@ campo não estiver aqui, ele não tem como ser preenchido, porque é este arquiv
 | indentar 2 espaços | vira subtarefa da tarefa acima (vale em qualquer profundidade) | tarefa de topo |
 
 Os marcadores só valem **no fim da linha** — `Revisar #3 do contrato` continua sendo um título.
-Um título que TERMINA na forma de um marcador sai escapado com `\\@joao`; a barra é
+Um título que TERMINA na forma de um marcador sai escapado com `\\` (`Ligar para \\@joao`); a barra é
 só para o parser e nunca aparece no card. Você não precisa escrever isso à mão.
 Marque `[x]` para concluir e adicione linhas novas à vontade: elas entram no quadro na próxima
 sincronização e voltam aqui com o `<!-- id:… -->` preenchido. **Não apague o marcador de id** das
