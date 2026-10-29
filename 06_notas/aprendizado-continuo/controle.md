@@ -32,3 +32,4 @@
 - 2026-10-02T11:10:12-03:00 · task `7953f975` (debug) · sem sinal reutilizável · regra de preservação de arquivo cumulativo já registrada em `AP-2026-09-17-1608-changelog-truncado.md`; nenhum aprendizado adicional.
 - 2026-10-16T17:05:00-03:00 · task `7953f975` (registro documental B4) · capturado · `AP-2026-10-16-1600-transcricao-mcp-corrompida.md`
 - 2026-10-16T17:35:00-03:00 · ciclo paralelo design system A+B (v0.0.89) · capturado · `AP-2026-10-16-1730-design-system-fundacao-ociosa.md`
+- 2026-10-29T16:20:00-03:00 · task `ce389a55-5a06-4dbe-b3d6-4516d17a0968` (REF-02) · capturado · `AP-2026-10-29-1610-transporte-contexto-triagem.md`
