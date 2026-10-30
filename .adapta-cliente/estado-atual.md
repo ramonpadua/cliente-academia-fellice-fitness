@@ -10,19 +10,19 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## Controle do orquestrador
 
-- task_id: d2aebe4c-2a02-48dc-a4fa-3ec1519b2ace (REF-03 — Atualizar as opções de rotina e a pergunta de profissão)
+- task_id: cf0687e4-1384-44ba-ae1b-6675124d27f0 (REF-04 — Corrigir o endereço e eliminar a oferta duplicada de freepass)
 - champion: Karol e Márcio
-- spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-03)
-- etapa: concluida
-- insumos_recebidos: (1) lista CLT — Ricardo, 29/10/2026 16:18, literal: "Assistente administrativo; vendedor; técnico enfermagem; médico; engenheiro; outros (se selecionar outros, colocar campo para escrever qual)" — texto livre aprovado para Outros do CLT; (2) obrigatoriedade — Ricardo, 29/10/2026 16:23, literal: "obrigatória para CLT e Autônomo"; (3) lista Autônomo — Ricardo, 29/10/2026 16:23, literal: "cabeleireiro; eletricista; advogado; dentista; médico; outros (se selecionar outros, colocar campo para escrever qual)" — texto livre aprovado para Outros do Autônomo; confirmação: "retirar as categorias genéricas (saúde/educação/plantonista)". NOTA: a lista aprovada NÃO inclui nutricionista (que a SPEC citava como exemplo do documento) — vale a lista literal aprovada; (4) rótulo Executivo/Gestor — Ricardo, 29/10/2026 16:25, literal: "Diretor ou alta gerência"
-- insumos_pendentes: NENHUM — 4/4 coletados
-- autorizacao_implementacao: Ricardo, 29/10/2026 16:26, literal: "Autorizar implementação"
-- teste_humano: aprovado — Ricardo, 30/10/2026 16:31, literal: "Teste OK — pode concluir a REF-03"
-- verificacao_automatica: QA Skip verde (setup, estática, build, integrações; suite inexistente, ran=false) + prova técnica no preview concluída
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-30-1640-listas-aprovadas-valem-sobre-spec.md
-- ultima_acao: fechamento REF-03 — revalidação independente (working tree, migração 0059 aplicada, schema de lead_submissions, QA Skip) e fechamento documental em fase.md, STATUS.md, changelog.md e controle.md (30/10/2026)
-- proxima_acao: nova task somente por ordem do consultor — próxima elegível pela SPEC é REF-04 (endereço/freepass), com insumos a coletar na própria task
-- atualizado_em: 2026-10-30T19:40:00Z
+- spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-04)
+- etapa: aguardando_autorizacao
+- insumos_recebidos: NENHUM — coleta inicia nesta task
+- insumos_pendentes: (1) endereço exato aprovado e em quais superfícies deve aparecer; (2) momento correto da oferta (onde o freepass/prêmio deve aparecer e onde NÃO); (3) texto do prêmio final e se é o mesmo benefício ("Aula Experimental Gratuita")
+- autorizacao_implementacao: ausente
+- teste_humano: pendente
+- verificacao_automatica: pendente
+- aprendizado: pendente
+- ultima_acao: análise REF-04 concluída — inventário de endereço e de menções de prêmio/freepass no código (30/10/2026, somente leitura)
+- proxima_acao: coletar insumos na própria task, uma pergunta por vez, a partir do endereço exato aprovado
+- atualizado_em: 2026-10-30T19:50:00Z
 
 ## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
 
@@ -57,5 +57,12 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - Estado anterior do código (v0.0.92): OCUPACOES tinha 7 opções — CLT; Autônomo/Empresário (juntos); Executivo/Gestor; Estudante; Aposentado; "Profissional da saúde, educação ou outra área com horário irregular" (categorias genéricas); "Prefiro não informar". Não existia pergunta secundária de profissão.
 - Valor interno = rótulo antes da REF-03; a migração 0059 altera valores futuros; histórico antigo continua legível (texto puro), sem recálculo (regra 5 da SPEC).
 - Recorte executado: migração 0059 + Index.tsx + Agendar.tsx; nenhuma outra coleção alterada.
+
+## Análise REF-04 — resumo sanitizado (30/10/2026, somente leitura)
+
+- Endereço no código: header do formulário "Terrazzo R1 Sports Club · Alto do Itaigara" (Index.tsx, bloco do cabeçalho); rodapé do formulário "Terrazzo R1 Sports Club · Rua Rosa dos Ventos, Alto do Itaigara" (Index.tsx, rodapé); Agendar.tsx cita "Terrazzo R1 Sports Club" sem rua (2 ocorrências); telas internas (Fila/Visão/Funil/Dashboard/Saude/NotFound) sem endereço voltado a lead.
+- Menções de prêmio/freepass no formulário (Index.tsx): microcopy da etapa 6 ("desbloquear seu prêmio"); microcopy da etapa 7 ("garanta sua Aula Experimental Gratuita"); mensagem de erro do consentimento ("resgatar o prêmio"); mensagem do WhatsApp pós-triagem ("agendar minha Aula Experimental Gratuita"); tela de sucesso com 2 menções ("Seu prêmio de Aula Experimental Gratuita está desbloqueado..." e "Resgate sua Aula Experimental Gratuita agora"); botão final ("Concluir & Resgatar Prêmio"); checkbox de consentimento ("Aula Experimental Gratuita, avisos e informações").
+- Agendar.tsx não menciona prêmio/freepass.
+- Nenhuma alteração feita nesta etapa; insumos bloqueiam implementação (regra da emenda: não escolher endereço por pesquisa pública, não criar promessa comercial).
 
 - fase_5: planejada, liberar somente pelo ritual após F4
