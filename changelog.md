@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-30 — REF-03 concluída (Fase 4, emenda E-F4-REF-20261027)
+
+- Task `d2aebe4c-2a02-48dc-a4fa-3ec1519b2ace` (REF-03 — Atualizar as opções de rotina e a pergunta de profissão) concluída: Autônomo e Empresário separados; categorias genéricas (saúde/educação/plantonista) retiradas; Executivo/Gestor exibido como "Diretor ou alta gerência"; pergunta secundária de profissão obrigatória para CLT e Autônomo, com "Outros" coletando texto livre (listas literais aprovadas pela cliente em 29/10/2026).
+- Skip v0.0.93 (commit `9ba9ab8`); migração `0059_ref03_ocupacao_profissao` aplicada — select `ocupacao` com a lista aprovada + campo texto `profissao` (160); down restaura a lista anterior; histórico anterior permanece legível, sem recálculo (regra 5 da SPEC).
+- QA Skip OK (setup, análise estática, build, integrações; suite inexistente, ran=false).
+- Provas no preview: lista nova renderizada; CLT mostra 6 profissões; Autônomo mostra 6 profissões; "Seguir" sem profissão bloqueia na etapa 6; CLT→Estudante remove a secundária e limpa o texto; submissão Autônomo/Advogado concluída com sucesso; `/agendar` pré-preenche Profissão "Advogado". Leitura anônima da API é 403 por design (listRule null).
+- Teste humano: aprovado pelo operador Ricardo em 30/10/2026 16:31 (mensagem literal "Teste OK — pode concluir a REF-03"), após revalidação independente do fechamento em 30/10 (working tree, migração 0059 aplicada e schema de `lead_submissions` conferidos na fonte).
+- REF-01 segue ABERTA (erro não reproduzido; diagnóstico inconclusivo por SPEC). Pendências de limpeza (decisão humana): 3 submissões sintéticas + 1 agendamento de teste; produção permanece não publicada (autorização separada).
+
 ## 2026-10-29 — REF-02 concluída (Fase 4, emenda E-F4-REF-20261027)
 
 - Task `ce389a55-5a06-4dbe-b3d6-4516d17a0968` (REF-02 — Levar as respostas já preenchidas até o agendamento) concluída: a triagem leva o contexto ao agendamento pelo estado do roteador (nada na URL, sem armazenamento local); `/agendar` pré-preenche "Seus dados" e reusa o mesmo `lead_submission_id` — sem lead/agendamento duplicado (contrato B3-03).
@@ -36,7 +45,7 @@
 - Registrada conclusão da Fase 1: F1-T001 a F1-T006 resolvidas com evidências humanas; gate da Fase 1 encerrado.
 - Geradas as SPECs da Fase 2: agenda de disponibilidade e reserva (SPEC-2-001) e visão operacional de tentativas (SPEC-2-002). Ambas marcadas como bloqueadas até resolução das tasks de desbloqueio.
 - O painel serial confirmou que grade de disponibilidade, duração, capacidade, responsável da agenda, campos mínimos de agendamento, papéis, permissões, regra de encaminhamento e critério de escalada não constam nas fontes. As duas SPECs foram marcadas como bloqueadas para evitar decisões ou configurações inventadas.
-- Autorizada a primeira leva de tasks de desbloqueio da Fase 2: F2-T001 a F2-T005 registram, separadamente, grade/duração/capacidade, responsável pela agenda, campos mínimos, papéis/permissões/regra de encaminhamento e critério de escalada. Todas permanecem bloqueadas até decisão humana, sem criar slots, agenda, contas, conectores ou publicação.
+- Autorizada a primeira leva de tasks de desbloqueio da Fase 2: F2-T001 a F2-T005 registram, separadamente, grade/duração/capacidade, responsável pela agenda, campos mínimos de agendamento, papéis/permissões/regra de encaminhamento e critério de escalada. Todas permanecem bloqueadas até decisão humana, sem criar slots, agenda, contas, conectores ou publicação.
 - Atualizados o índice da Fase 2 (`00-INDICE.md`), as tarefas gerais da Fase 2 (`00-Tasks_Gerais.md`) e o `STATUS.md`; fase atual passa a ser Fase 2.
 
 ## 2026-09-21
