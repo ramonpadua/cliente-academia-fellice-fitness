@@ -33,3 +33,4 @@
 - 2026-10-16T17:05:00-03:00 · task `7953f975` (registro documental B4) · capturado · `AP-2026-10-16-1600-transcricao-mcp-corrompida.md`
 - 2026-10-16T17:35:00-03:00 · ciclo paralelo design system A+B (v0.0.89) · capturado · `AP-2026-10-16-1730-design-system-fundacao-ociosa.md`
 - 2026-10-29T16:20:00-03:00 · task `ce389a55-5a06-4dbe-b3d6-4516d17a0968` (REF-02) · capturado · `AP-2026-10-29-1610-transporte-contexto-triagem.md`
+- 2026-10-30T16:40:00-03:00 · task `d2aebe4c-2a02-48dc-a4fa-3ec1519b2ace` (REF-03) · capturado · `AP-2026-10-30-1640-listas-aprovadas-valem-sobre-spec.md`
