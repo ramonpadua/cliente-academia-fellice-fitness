@@ -13,16 +13,24 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - task_id: d2aebe4c-2a02-48dc-a4fa-3ec1519b2ace (REF-03 — Atualizar as opções de rotina e a pergunta de profissão)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-03)
-- etapa: aguardando_teste_humano
+- etapa: concluida
 - insumos_recebidos: (1) lista CLT — Ricardo, 29/10/2026 16:18, literal: "Assistente administrativo; vendedor; técnico enfermagem; médico; engenheiro; outros (se selecionar outros, colocar campo para escrever qual)" — texto livre aprovado para Outros do CLT; (2) obrigatoriedade — Ricardo, 29/10/2026 16:23, literal: "obrigatória para CLT e Autônomo"; (3) lista Autônomo — Ricardo, 29/10/2026 16:23, literal: "cabeleireiro; eletricista; advogado; dentista; médico; outros (se selecionar outros, colocar campo para escrever qual)" — texto livre aprovado para Outros do Autônomo; confirmação: "retirar as categorias genéricas (saúde/educação/plantonista)". NOTA: a lista aprovada NÃO inclui nutricionista (que a SPEC citava como exemplo do documento) — vale a lista literal aprovada; (4) rótulo Executivo/Gestor — Ricardo, 29/10/2026 16:25, literal: "Diretor ou alta gerência"
 - insumos_pendentes: NENHUM — 4/4 coletados
 - autorizacao_implementacao: Ricardo, 29/10/2026 16:26, literal: "Autorizar implementação"
-- teste_humano: PENDENTE — portão atual
+- teste_humano: aprovado — Ricardo, 30/10/2026 16:31, literal: "Teste OK — pode concluir a REF-03"
 - verificacao_automatica: QA Skip verde (setup, estática, build, integrações; suite inexistente, ran=false) + prova técnica no preview concluída
-- aprendizado: pendente
-- ultima_acao: implementação concluída — Skip v0.0.93 (commit 9ba9ab8), migração 0059 aplicada, QA verde, prova técnica no preview (GREEN: listas novas, secundária condicional, obrigatoriedade, limpeza na troca, transporte da profissão ao /agendar)
-- proxima_acao: teste humano do Ricardo no preview (caminhos CLT e Autônomo, Outros com texto, troca de rotina, níveis sem secundária) e, aprovado, fechamento documental
-- atualizado_em: 2026-10-29T19:55:00Z
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-30-1640-listas-aprovadas-valem-sobre-spec.md
+- ultima_acao: fechamento REF-03 — revalidação independente (working tree, migração 0059 aplicada, schema de lead_submissions, QA Skip) e fechamento documental em fase.md, STATUS.md, changelog.md e controle.md (30/10/2026)
+- proxima_acao: nova task somente por ordem do consultor — próxima elegível pela SPEC é REF-04 (endereço/freepass), com insumos a coletar na própria task
+- atualizado_em: 2026-10-30T19:40:00Z
+
+## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
+
+- Teste humano aprovado pelo operador Ricardo em 30/10/2026 16:31 (literal: "Teste OK — pode concluir a REF-03").
+- Revalidação independente do fechamento (30/10): working tree do Skip confere com o implementado em 29/10 (Index.tsx FORM_VERSION v1.1.0 com listas aprovadas, secundária condicional obrigatória, Outros com texto, limpeza na troca de rotina, gravação em lead_submissions/evento/lead_handoffs; Agendar.tsx transporta profissão com fallback para ocupação); migração `0059_ref03_ocupacao_profissao` status applied; schema de `lead_submissions` com select `ocupacao` (7 valores aprovados) + texto `profissao` (160); QA Skip verde (suite inexistente, ran=false).
+- Documentação atualizada: fase.md (checkbox + nota CONCLUÍDA), STATUS.md, changelog.md, controle.md e AP-2026-10-30-1640.
+- Pendências de limpeza acumuladas (decisão humana): 3 submissões sintéticas ("Teste REF02 Sintetico", "Teste REF02 Fechamento", "Teste REF03 Sintetico") + 1 agendamento de teste em `slot-2026-09-21-1130`.
+- Próxima task elegível pela SPEC: REF-04 (endereço/freepass), pré-condição REF-03 aceita satisfeita; insumos a coletar na própria task.
 
 ## REF-01 — Fila (ABERTA, não corrigida)
 
