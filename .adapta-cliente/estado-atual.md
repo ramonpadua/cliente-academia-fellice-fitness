@@ -4,7 +4,7 @@
 
 Objetivo único das etapas restantes: refinar, validar e concluir a plataforma atual. Executar REF-01 a REF-12, depois os controles locais de qualidade/conversão previstos na fase 4, e finalizar com validação ponta a ponta e encerramento na fase 5. Novo mapeamento somente APÓS concluir a fase 5, em outro processo, sem entrega adicional presumida neste plano.
 
-Não solicitar credenciais, desenhar integrações externas ou incluir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
+Não solicitar credenciais, desenhar integrações externa ou incluir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
 
 Uma implementação por vez, insumos operacionais perguntados à cliente na própria task, prova técnica e teste humano explícito. Primeira ação: REF-01, diagnóstico da Fila. Prazos a combinar. Nada é marcado concluído por esta atualização documental.
 
@@ -46,7 +46,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## Insumos REF-05 — recebidos do consultor (06/11/2026)
 
-- **Insumo 1/3 — escala e pesos (respostas literais do formulário da task):** escala 0–10; Profissional CLT = 5; Autônomo = 6; Empresário = 7; Diretor ou alta gerência = 9; Estudante = 7; Aposentado = 7; Prefiro não informar = 5.
+- **Insumo 1/3 — escala e pesos (respostas literais {formulário da task):** escala 0–10; Profissional CLT = 5; Autônomo = 6; Empresário = 7; Diretor ou alta gerência = 9; Estudante = 7; Aposentado = 7; Prefiro não informar = 5.
 - Observação registrada: "Prefiro não informar" recebeu peso explícito 5 — decisão do consultor; é distinta do tratamento de resposta AUSENTE/inválida (a definir no insumo 2).
 - Observação para o insumo 2 (não é decisão): com esses pesos, se as faixas forem Alta ≥8 / Média 5–7 / Baixa 0–4, nenhuma resposta da lista cai em Baixa — apenas resposta ausente com nota 0.
 - **Insumo 2/3 — faixas, desempate e ausentes (respostas literais do formulário da task):** Alta = nota ≥ 7; Baixa = nota ≤ 5 (entre eles, Média); desempate = ordem de chegada (mais antigo primeiro); resposta ausente/inválida = nota 0, cai em Baixa e exibe "Sem pontuação".
