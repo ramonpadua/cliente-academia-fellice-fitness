@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-06 — REF-04 concluída (Fase 4, emenda E-F4-REF-20261027)
+
+- Task `cf0687e4-1384-44ba-ae1b-6675124d27f0` (REF-04 — Corrigir o endereço e eliminar a oferta duplicada de freepass) concluída: endereço aprovado pela cliente ("Rua Rubens Guelli, 68 - Terraço - Itaigara, Salvador - BA, 41815-135") no header e rodapé do formulário e no Agendar (header + confirmação); oferta única de "Aula Experimental Gratuita" somente após a conclusão da triagem — microcopy das etapas 6 e 7, erro do consentimento, botão final ("Concluir") e checkbox de consentimento sem menção a prêmio.
+- Skip v0.0.94 (commit `f569edc`); Index.tsx FORM_VERSION v1.1.1; sem migração, sem mudança de coleção, sem nova promessa comercial.
+- QA Skip OK (setup, análise estática, build, integrações; suite inexistente, ran=false).
+- Provas no preview (bundle `index-DtdHmEAH.js`): endereço aprovado 3× + 1 parcial na confirmação do Agendar; 0 ocorrências dos textos de prêmio pré-triagem ("desbloquear seu prêmio", "garanta sua Aula Experimental Gratuita", "resgatar o prêmio", "Concluir & Resgatar Prêmio", "Rua Rosa dos Ventos", "liberar minha Aula"); oferta restante somente pós-triagem (mensagem do WhatsApp + tela de sucesso 2×).
+- Teste humano: aprovado pelo operador Ricardo em 06/11/2026 10:28 (literal: "o teste está ok"), com ressalva registrada — "o prêmio está disponível para todos, independente da triagem, a triagem é feita para qualificar o perfil do nosso cliente". A ressalva é o recorte acordado para a REF-06 (elegibilidade por perfil, matriz ainda não aprovada) e fica registrada como insumo antecipado da REF-06; não reabre a REF-04.
+- REF-01 segue ABERTA (erro não reproduzido; diagnóstico inconclusivo por SPEC). Pendências de limpeza (decisão humana): 3 submissões sintéticas + 1 agendamento de teste; produção permanece não publicada (autorização separada).
+
 ## 2026-10-30 — REF-03 concluída (Fase 4, emenda E-F4-REF-20261027)
 
 - Task `d2aebe4c-2a02-48dc-a4fa-3ec1519b2ace` (REF-03 — Atualizar as opções de rotina e a pergunta de profissão) concluída: Autônomo e Empresário separados; categorias genéricas (saúde/educação/plantonista) retiradas; Executivo/Gestor exibido como "Diretor ou alta gerência"; pergunta secundária de profissão obrigatória para CLT e Autônomo, com "Outros" coletando texto livre (listas literais aprovadas pela cliente em 29/10/2026).
@@ -44,7 +53,7 @@
 
 - Registrada conclusão da Fase 1: F1-T001 a F1-T006 resolvidas com evidências humanas; gate da Fase 1 encerrado.
 - Geradas as SPECs da Fase 2: agenda de disponibilidade e reserva (SPEC-2-001) e visão operacional de tentativas (SPEC-2-002). Ambas marcadas como bloqueadas até resolução das tasks de desbloqueio.
-- O painel serial confirmou que grade de disponibilidade, duração, capacidade, responsável da agenda, campos mínimos de agendamento, papéis, permissões, regra de encaminhamento e critério de escalada não constam nas fontes. As duas SPECs foram marcadas como bloqueadas para evitar decisões ou configurações inventadas.
+- O painel serial confirmou que grade de disponibilidade, duração, capacidade, responsável da agenda, campos mínimos de agendamento, papéis/permissões, regra de encaminhamento e critério de escalada não constam nas fontes. As duas SPECs foram marcadas como bloqueadas para evitar decisões ou configurações inventadas.
 - Autorizada a primeira leva de tasks de desbloqueio da Fase 2: F2-T001 a F2-T005 registram, separadamente, grade/duração/capacidade, responsável pela agenda, campos mínimos, papéis/permissões/regra de encaminhamento e critério de escalada. Todas permanecem bloqueadas até decisão humana, sem criar slots, agenda, contas, conectores ou publicação.
 - Atualizados o índice da Fase 2 (`00-INDICE.md`), as tarefas gerais da Fase 2 (`00-Tasks_Gerais.md`) e o `STATUS.md`; fase atual passa a ser Fase 2.
 
