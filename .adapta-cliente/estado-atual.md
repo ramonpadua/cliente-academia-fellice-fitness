@@ -41,7 +41,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - Fonte das respostas: `lead_submissions.ocupacao` (select com as 7 opções aprovadas na REF-03 — migração 0059); respostas antigas anteriores à REF-03 têm valores de rótulo (texto puro) e não estão na lista nova.
 - Recorte da SPEC: pesos aprovados pela cliente; cálculo determinístico e versionado, com valor e motivo rastreáveis; respostas ausentes/inválidas não geram nota favorável inventada; não ordenar/repriorizar histórico sem decisão própria; esta task NÃO decide quem pode agendar (elegibilidade é REF-06; score só entra lá se a cliente vincular formalmente).
 - Superfícies de exibição candidatas: Fila (`/fila`, Queue.tsx — gate champion/consultor) e Visão (`/visao`, Visao.tsx — gate champion/consultor/gestao/supervisora); onde a equipe quer ver é insumo.
-- Persistência candidata: campo(s) novo(s) em `lead_submissions` (valor + versão da matriz v1) via migração 0060 — decisões de estrutura só após insumos e autorização.
+- Persistência candidata: campo(s) novo(s) em `lead_submissions` (valor + versão da matriz + motivo) via migração 0060 — decisões de estrutura só após insumos e autorização.
 - Nada alterado nesta etapa; a SPEC proíbe inferir pesos de cargo/renda e criar mapa de calor não solicitado.
 
 ## Insumos REF-05 — recebidos do consultor (06/11/2026)
