@@ -14,15 +14,15 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-04)
 - etapa: aguardando_autorizacao
-- insumos_recebidos: (1) endereço exato — Ricardo, 30/10/2026 16:50, literal: "Rua Rubens Guelli, 68 - Terraço - Itaigara, Salvador - BA, 41815-135"
-- insumos_pendentes: (2) momento correto da oferta (onde o freepass/prêmio deve aparecer e onde NÃO); (3) texto do prêmio final e se é o mesmo benefício ("Aula Experimental Gratuita")
+- insumos_recebidos: (1) endereço exato — Ricardo, 30/10/2026 16:50, literal: "Rua Rubens Guelli, 68 - Terraço - Itaigara, Salvador - BA, 41815-135"; (2) momento da oferta — Ricardo, 30/10/2026 10:09, literal: "deve aparecer somente quando a triagem for concluída e as respostas forem de acordo com a qualificação e perfil que desejamos". NOTA: a condicionalidade por qualificação/perfil depende da matriz da REF-06 (ainda não aprovada) — na REF-04 o recorte executável é "somente após a conclusão da triagem"; a parte de perfil fica para REF-06, conforme a SPEC ("a oferta final respeita REF-06; não concluir antes da prova combinada")
+- insumos_pendentes: (3) texto do prêmio final e se é o mesmo benefício ("Aula Experimental Gratuita")
 - autorizacao_implementacao: ausente
 - teste_humano: pendente
 - verificacao_automatica: pendente
 - aprendizado: pendente
-- ultima_acao: insumo 1/3 da REF-04 recebido e registrado — endereço exato aprovado (30/10/2026 16:50)
-- proxima_acao: coletar insumo 2/3 — momento correto da oferta (onde o freepass deve aparecer e onde NÃO)
-- atualizado_em: 2026-10-30T19:52:00Z
+- ultima_acao: insumo 2/3 da REF-04 recebido e registrado — momento da oferta (30/10/2026 10:09), com dependência de REF-06 anotada
+- proxima_acao: coletar insumo 3/3 — texto do prêmio final e se é o mesmo benefício ("Aula Experimental Gratuita")
+- atualizado_em: 2026-10-30T20:12:00Z
 
 ## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
 
