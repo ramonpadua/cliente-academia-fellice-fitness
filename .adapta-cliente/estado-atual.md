@@ -13,16 +13,16 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - task_id: cf0687e4-1384-44ba-ae1b-6675124d27f0 (REF-04 — Corrigir o endereço e eliminar a oferta duplicada de freepass)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-04)
-- etapa: aguardando_autorizacao
+- etapa: aguardando_teste_humano
 - insumos_recebidos: (1) endereço exato — Ricardo, 30/10/2026 16:50, literal: "Rua Rubens Guelli, 68 - Terraço - Itaigara, Salvador - BA, 41815-135"; (2) momento da oferta — Ricardo, 06/11/2026 10:09, literal: "deve aparecer somente quando a triagem for concluída e as respostas forem de acordo com a qualificação e perfil que desejamos". NOTA: a condicionalidade por qualificação/perfil depende da matriz da REF-06 (ainda não aprovada) — na REF-04 o recorte executável é "somente após a conclusão da triagem"; a parte de perfil fica para REF-06, conforme a SPEC ("a oferta final respeita REF-06; não concluir antes da prova combinada"); (3) texto do prêmio — Ricardo, 06/11/2026 10:10, literal: "Sim, é o mesmo benefício" (campo de texto livre não preenchido) — mantém "Aula Experimental Gratuita" como texto da oferta
 - insumos_pendentes: NENHUM — 3/3 coletados
-- autorizacao_implementacao: ausente
-- teste_humano: pendente
-- verificacao_automatica: pendente
+- autorizacao_implementacao: Ricardo, 06/11/2026 10:12, literal: "pode implementar"
+- teste_humano: PENDENTE — portão atual
+- verificacao_automatica: passou — QA Skip verde em v0.0.94 (commit f569edc; setup, estática, build, integrações; suite inexistente, ran=false) + provas no bundle do preview (index-DtdHmEAH.js): endereço aprovado 3× (header Index, rodapé Index, header Agendar) + 1 parcial na confirmação do Agendar; 0 ocorrências dos textos removidos (desbloquear seu prêmio, garanta sua Aula Experimental Gratuita, resgatar o prêmio, Concluir & Resgatar Prêmio, Rua Rosa dos Ventos, liberar minha Aula); oferta mantida somente pós-triagem (mensagem do WhatsApp + tela de sucesso 2×); botão final "Concluir" com ícone de check
 - aprendizado: pendente
-- ultima_acao: insumo 3/3 da REF-04 recebido e registrado — mesmo benefício "Aula Experimental Gratuita" (06/11/2026 10:10); correção da data do insumo 2 (30/10 → 06/11, erro de transcrição)
-- proxima_acao: aguardar autorização do consultor para implementar o plano REF-04 (endereço nas 3 superfícies; oferta única somente pós-triagem; perfil na REF-06)
-- atualizado_em: 2026-11-06T13:15:00Z
+- ultima_acao: implementação REF-04 concluída — Skip v0.0.94 (commit f569edc), Index.tsx v1.1.1 e Agendar.tsx, sem migração nem mudança de coleção; QA verde; provas no preview
+- proxima_acao: teste humano do Ricardo no preview (endereço nas 3 superfícies; percurso das etapas 1–7 sem menção a prêmio; oferta presente só na tela de sucesso) e, aprovado, fechamento documental
+- atualizado_em: 2026-11-06T13:30:00Z
 
 ## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
 
@@ -57,6 +57,14 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - Estado anterior do código (v0.0.92): OCUPACOES tinha 7 opções — CLT; Autônomo/Empresário (juntos); Executivo/Gestor; Estudante; Aposentado; "Profissional da saúde, educação ou outra área com horário irregular" (categorias genéricas); "Prefiro não informar". Não existia pergunta secundária de profissão.
 - Valor interno = rótulo antes da REF-03; a migração 0059 altera valores futuros; histórico antigo continua legível (texto puro), sem recálculo (regra 5 da SPEC).
 - Recorte executado: migração 0059 + Index.tsx + Agendar.tsx; nenhuma outra coleção alterada.
+
+## Implementação REF-04 — concluída 06/11/2026 (v0.0.94, commit f569edc)
+
+- Index.tsx (FORM_VERSION v1.1.1): header e rodapé com o endereço aprovado; microcopy das etapas 6 e 7 sem menção a prêmio; erro do consentimento sem "resgatar o prêmio"; botão final "Concluir" (sem "Resgatar Prêmio"); checkbox de consentimento sem "Aula Experimental Gratuita".
+- Agendar.tsx: header e confirmação de reserva com o endereço aprovado.
+- Tela de sucesso e mensagem do WhatsApp preservadas (momento aprovado da oferta; insumo 3: mesmo benefício "Aula Experimental Gratuita").
+- Sem migração, sem mudança de coleção, sem nova promessa comercial; condicionalidade por perfil segue para REF-06.
+- QA Skip verde (setup, estática, build, integrações; suite inexistente, ran=false). Provas no bundle index-DtdHmEAH.js: endereço 3×+1 parcial; 0 textos de prêmio pré-triagem; oferta só pós-triagem.
 
 ## Análise REF-04 — resumo sanitizado (30/10/2026, somente leitura)
 
