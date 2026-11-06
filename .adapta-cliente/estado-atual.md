@@ -27,7 +27,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 ## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
 
 - Teste humano aprovado pelo operador Ricardo em 30/10/2026 16:31 (literal: "Teste OK — pode concluir a REF-03").
-- Revalidação independente do fechamento (30/10): working tree do Skip confere com o implementado em 29/10 (Index.tsx FORM_VERSION v1.1.0 com listas aprovadas, secundária condicional obrigatória, Outros com texto, limpeza na troca de rotina, gravação em lead_submissions/evento/lead_appointments e lead_handoffs; Agendar.tsx transporta profissão com fallback para ocupação); migração `0059_ref03_ocupacao_profissao` status applied; schema de `lead_submissions` com select `ocupacao` (7 valores aprovados) + texto `profissao` (160); QA Skip verde (suite inexistente, ran=false).
+- Revalidação independente do fechamento (30/10): working tree do Skip confere com o implementado em 29/10 (Index.tsx FORM_VERSION v1.1.0 com listas aprovadas, secundária condicional obrigatória, Outros com texto, limpeza na troca de rotina, gravação em lead_submissions/evento/lead_handoffs; Agendar.tsx transporta profissão com fallback para ocupação); migração `0059_ref03_ocupacao_profissao` status applied; schema de `lead_submissions` com select `ocupacao` (7 valores aprovados) + texto `profissao` (160); QA Skip verde (suite inexistente, ran=false).
 - Documentação atualizada: fase.md (checkbox + nota CONCLUÍDA), STATUS.md, changelog.md, controle.md e AP-2026-10-30-1640.
 - Pendências de limpeza acumuladas (decisão humana): 3 submissões sintéticas ("Teste REF02 Sintetico", "Teste REF02 Fechamento", "Teste REF03 Sintetico") + 1 agendamento de teste em `slot-2026-09-21-1130`.
 - Próxima task elegível pela SPEC: REF-04 (endereço/freepass), pré-condição REF-03 aceita satisfeita; insumos a coletar na própria task.
@@ -35,7 +35,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 ## Fechamento REF-04 — 06/11/2026 (v0.0.94, commit f569edc)
 
 - Teste humano aprovado pelo operador Ricardo em 06/11/2026 10:28 (literal: "o teste está ok"), com ressalva registrada: "o prêmio está disponível para todos, independente da triagem, a triagem é feita para qualificar o perfil do nosso cliente".
-- A ressalva confirma o recorte acordado: a oferta única pós-triagem foi implementada na REF-04; a condicionalidade por qualificação/perfil (elegibilidade) é escopo da REF-06 e depende da matriz de perfil ainda não aprovada. A frase do Ricardo fica registrada como insumo antecipado da REF-06.
+- A ressalva confirma o recorte acordado: a oferta única pós-triagem foi implementada na REF-04; a condicionalidade por qualificação/perfil (elegibilidade) é escopo da REF-06 e depende da matriz v1 da REF-05 ainda não aprovada. A frase do Ricardo fica registrada como insumo antecipado da REF-06.
 - Revalidação independente do fechamento (06/11): working tree v0.0.94 (commit f569edc) com Index.tsx v1.1.1 e Agendar.tsx; bundle do preview (index-DtdHmEAH.js) rebaixado e conferido — endereço aprovado 3×+1 parcial; 0 ocorrências dos textos de prêmio pré-triagem; oferta restante somente pós-triagem (3×); QA Skip verde (suite inexistente, ran=false).
 - Pendências de limpeza acumuladas (decisão humana): 3 submissões sintéticas + 1 agendamento de teste.
 - Próxima task elegível pela SPEC: REF-05 (pontuação de ocupação), pré-condição REF-03 aceita satisfeita; insumos (pesos por opção, escala, faixas, desempate) a coletar na própria task.
@@ -48,7 +48,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## REF-02 — concluída (29/10/2026, Skip v0.0.92 db03c5f)
 
-- Triagem leva o contexto ao agendamento pelo estado do roteador (nada na URL, sem armazenamento local); `/agendar` reusa o mesmo `lead_submission_id` (B3-03).
+- Triagem leva o contexto ao agendamento pelo estado do roteador (nada na URL, sem armazenamento local); `/agendar` pré-preenche "Seus dados" e reusa o mesmo `lead_submission_id` (B3-03).
 - Acesso direto sem triagem mantém o comportamento anterior; falha de leitura mantém o formulário vazio sem sucesso falso.
 - Teste humano aprovado pelo operador; persistência entre visitas segue fora do recorte.
 - Pendências de limpeza (decisão humana): 2 submissões sintéticas ("Teste REF02 Sintetico", "Teste REF02 Fechamento") + 1 agendamento de teste em `slot-2026-09-21-1130` + 1 submissão sintética REF-03 ("Teste REF03 Sintetico").
@@ -64,7 +64,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 - Estado anterior do código (v0.0.92): OCUPACOES tinha 7 opções — CLT; Autônomo/Empresário (juntos); Executivo/Gestor; Estudante; Aposentado; "Profissional da saúde, educação ou outra área com horário irregular" (categorias genéricas); "Prefiro não informar". Não existia pergunta secundária de profissão.
 - Valor interno = rótulo antes da REF-03; a migração 0059 altera valores futuros; histórico antigo continua legível (texto puro), sem recálculo (regra 5 da SPEC).
-- Recorte executado: migração 0059 + Index.tsx + Index.tsx + Agendar.tsx; nenhuma outra coleção alterada.
+- Recorte executado: migração 0059 + Index.tsx + Agendar.tsx; nenhuma outra coleção alterada.
 
 ## Implementação REF-04 — concluída 06/11/2026 (v0.0.94, commit f569edc)
 
@@ -77,7 +77,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 ## Análise REF-04 — resumo sanitizado (30/10/2026, somente leitura)
 
 - Endereço no código: header do formulário "Terrazzo R1 Sports Club · Alto do Itaigara" (Index.tsx, bloco do cabeçalho); rodapé do formulário "Terrazzo R1 Sports Club · Rua Rosa dos Ventos, Alto do Itaigara" (Index.tsx, rodapé); Agendar.tsx cita "Terrazzo R1 Sports Club" sem rua (2 ocorrências); telas internas (Fila/Visão/Funil/Dashboard/Saude/NotFound) sem endereço voltado a lead.
-- Menções de prêmio/freepass no formulário (Index.tsx): microcopy da etapa 6 ("desbloquear seu prêmio"); microcopy da etapa 7 ("garanta sua Aula Experimental Gratuita"); mensagem de erro do consentimento ("resgatar o prêmio"); mensagem do WhatsApp pós-triagem ("agendar minha Aula Experimental Gratuita"); tela de sucesso com 2 menções ("Seu prêmio de Aula Experimental Gratuita..."); botão final ("Concluir & Resgatar Prêmio"); checkbox de consentimento ("Aula Experimental Gratuita, avisos e informações").
+- Menções de prêmio/freepass no formulário (Index.tsx): microcopy da etapa 6 ("desbloquear seu prêmio"); microcopy da etapa 7 ("garanta sua Aula Experimental Gratuita"); mensagem de erro do consentimento ("resgatar o prêmio"); mensagem do WhatsApp pós-triagem ("agendar minha Aula Experimental Gratuita"); tela de sucesso com 2 menções ("Seu prêmio de Aula Experimental Gratuita está desbloqueado..." e "Resgate sua Aula Experimental Gratuita agora"); botão final ("Concluir & Resgatar Prêmio"); checkbox de consentimento ("Aula Experimental Gratuita, avisos e informações").
 - Agendar.tsx não menciona prêmio/freepass.
 - Nenhuma alteração feita nesta etapa; insumos bloqueiam implementação (regra da emenda: não escolher endereço por pesquisa pública, não criar promessa comercial).
 
