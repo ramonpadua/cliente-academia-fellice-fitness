@@ -4,7 +4,7 @@
 
 Objetivo único das etapas restantes: refinar, validar e concluir a plataforma atual. Executar REF-01 a REF-12, depois os controles locais de qualidade/conversão previstos na fase 4, e finalizar com validação ponta a ponta e encerramento na fase 5. Novo mapeamento somente APÓS concluir a fase 5, em outro processo, sem entrega adicional presumida neste plano.
 
-Não solicitar credenciais, desenhar integrações externas ou inserir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
+Não solicitar credenciais, desenhar integrações externas ou incluir escopo de outro sistema nas tasks atuais. Os quatro cards de integração/painel e a subtarefa ficam suspensos, não concluídos, somente para rastreabilidade. Não iniciar nem discutir novo escopo durante os refinamentos. Histórico de decisões não é orientação de execução.
 
 Uma implementação por vez, insumos operacionais perguntados à cliente na própria task, prova técnica e teste humano explícito. Primeira ação: REF-01, diagnóstico da Fila. Prazos a combinar. Nada é marcado concluído por esta atualização documental.
 
@@ -12,12 +12,12 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 - Fase atual: 4 — refinamentos da plataforma e validação/conversão local.
 - Entregas anteriores: fases 1 a 3 encerradas, arquivos e aceites preservados.
-- Cards preservados: 20 de topo; 12 refinamentos + 4 cards locais (baseline, loop, ciclo, revisão final) pendentes; 4 cards suspensos fora do recorte de execução. **REF-02 concluída em 29/10/2026 e REF-03 concluída em 30/10/2026, ambas com teste humano aprovado; REF-01 segue aberta (erro não reproduzido, diagnóstico inconclusivo por SPEC). Nenhum outro aceite registrado.**
-- Execução técnica: Skip v0.0.93 (commit `9ba9ab8`) no preview; produção não publicada. Banco alterado pela migração 0059 (REF-03) e por dados sintéticos de teste (3 submissões + 1 agendamento), pendentes de limpeza por decisão humana.
+- Cards preservados: 20 de topo; 12 refinamentos + 4 cards locais (baseline, loop, ciclo, revisão final) pendentes; 4 cards suspensos fora do recorte de execução. **REF-02 (29/10), REF-03 (30/10) e REF-04 (06/11) concluídas com teste humano aprovado; REF-01 segue aberta (erro não reproduzido, diagnóstico inconclusivo por SPEC). Nenhum outro aceite registrado.**
+- Execução técnica: Skip v0.0.94 (commit `f569edc`) no preview; produção não publicada. Banco alterado pela migração 0059 (REF-03) e por dados sintéticos de teste (3 submissões + 1 agendamento), pendentes de limpeza por decisão humana.
 
 ## Sequência restante
 
-1. REF-01 a REF-10: corrigir e refinar formulário, dados, mídia, priorização, agendamento, Fila e Visão, conforme decisões confirmadas nas próprias tasks. (REF-02 concluída 29/10; REF-03 concluída 30/10.)
+1. REF-01 a REF-10: corrigir e refinar formulário, dados, mídia, priorização, agendamento, Fila e Visão, conforme decisões confirmadas nas próprias tasks. (REF-02 concluída 29/10; REF-03 concluída 30/10; REF-04 concluída 06/11.)
 2. REF-11 e REF-12: regressão do conjunto e aceite da cliente, sem avançar em falha.
 3. Baseline/alvo e ciclo local: medir fontes locais autorizadas, registrar cobertura/limitações e veredito humano. Não inventar dados ou declarar ganho sem evidência.
 4. Revisão da fase 4 pelo consultor, considerando somente o recorte vigente.
@@ -26,4 +26,4 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## Próxima ação
 
-REF-04 (Corrigir o endereço e eliminar a oferta duplicada de freepass) — pré-condição REF-03 aceita, agora satisfeita; insumos (endereço exato aprovado e momento da oferta) a coletar na própria task. Alternativa: retomar REF-01 se a Fila voltar a falhar. Nenhuma conta externa é pré-requisito.
+REF-05 (Criar pontuação de ocupação para priorizar o atendimento) — pré-condição REF-03 aceita, satisfeita; insumos (pesos por opção, escala, faixas de prioridade, desempate e onde a equipe vê a informação) a coletar na própria task. A ressalva do teste da REF-04 (prêmio disponível para todos) alimenta a REF-06 (elegibilidade por perfil). Alternativa: retomar REF-01 se a Fila voltar a falhar. Nenhuma conta externa é pré-requisito.
