@@ -13,21 +13,21 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - task_id: 547994b2-a335-4fd9-878a-52b67b6c0b60 (REF-05 — Criar pontuação de ocupação para priorizar o atendimento)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-05)
-- etapa: aguardando_autorizacao
-- insumos_recebidos: NENHUM — coleta inicia nesta task
-- insumos_pendentes: (1) escala e pesos por opção de rotina (7 opções aprovadas na REF-03); (2) faixas de prioridade, desempate e tratamento de "Prefiro não informar"/resposta ausente; (3) onde a equipe vê a prioridade (Fila, Visão ou ambos)
+- etapa: coletando_insumos
+- insumos_recebidos: (1/3) escala e pesos — 06/11/2026, respostas literais do formulário da task: escala 0–10; CLT 5; Autônomo 6; Empresário 7; Diretor ou alta gerência 9; Estudante 7; Aposentado 7; Prefiro não informar 5
+- insumos_pendentes: (2) faixas de prioridade, desempate e tratamento de resposta ausente/inválida; (3) onde a equipe vê a prioridade (Fila, Visão ou ambos) e se a Fila reordena ou só exibe
 - autorizacao_implementacao: ausente
 - teste_humano: pendente
 - verificacao_automatica: pendente
 - aprendizado: pendente
-- ultima_acao: análise REF-05 concluída — inventário de onde a pontuação pode nascer e das telas de exibição (06/11/2026, somente leitura)
-- proxima_acao: coletar insumos na própria task, uma pergunta por vez, a partir da escala e dos pesos por opção
-- atualizado_em: 2026-11-06T13:40:00Z
+- ultima_acao: insumo 1/3 (escala e pesos) recebido e registrado (06/11/2026)
+- proxima_acao: coletar insumo 2/3 — faixas de prioridade, desempate e tratamento de ausente/inválida
+- atualizado_em: 2026-11-06T13:45:00Z
 
 ## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
 
 - Teste humano aprovado pelo operador Ricardo em 30/10/2026 16:31 (literal: "Teste OK — pode concluir a REF-03").
-- Revalidação independente do fechamento (30/10): working tree do Skip confere com o implementado em 29/10 (Index.tsx FORM_VERSION v1.1.0 com listas aprovadas, secundária condicional obrigatória, Outros com texto, limpeza na troca de rotina, gravação em lead_submissions/evento/lead_handoffs; Agendar.tsx transporta profissão com fallback para ocupação); migração `0059_ref03_ocupacao_profissao` status applied; schema de `lead_submissions` com select `ocupacao` (7 valores aprovados) + texto `profissao` (160); QA Skip verde (suite inexistente, ran=false).
+- Revalidação independente do fechamento (30/10): working tree do Skip confere com o implementado em 29/10 (Index.tsx FORM_VERSION v1.1.0 com listas aprovadas, secundária condicional obrigatória, Outros com texto, limpeza na troca de rotina, gravação em lead_submissions/evento/lead_appointments e lead_handoffs; Agendar.tsx transporta profissão com fallback para ocupação); migração `0059_ref03_ocupacao_profissao` status applied; schema de `lead_submissions` com select `ocupacao` (7 valores aprovados) + texto `profissao` (160); QA Skip verde (suite inexistente, ran=false).
 - Documentação atualizada: fase.md (checkbox + nota CONCLUÍDA), STATUS.md, changelog.md, controle.md e AP-2026-10-30-1640.
 - Pendências de limpeza acumuladas (decisão humana): 3 submissões sintéticas ("Teste REF02 Sintetico", "Teste REF02 Fechamento", "Teste REF03 Sintetico") + 1 agendamento de teste em `slot-2026-09-21-1130`.
 - Próxima task elegível pela SPEC: REF-04 (endereço/freepass), pré-condição REF-03 aceita satisfeita; insumos a coletar na própria task.
@@ -48,7 +48,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## REF-02 — concluída (29/10/2026, Skip v0.0.92 db03c5f)
 
-- Triagem leva o contexto ao agendamento pelo estado do roteador (nada na URL, sem armazenamento local); `/agendar` pré-preenche "Seus dados" e reusa o mesmo `lead_submission_id` (B3-03).
+- Triagem leva o contexto ao agendamento pelo estado do roteador (nada na URL, sem armazenamento local); `/agendar` reusa o mesmo `lead_submission_id` (B3-03).
 - Acesso direto sem triagem mantém o comportamento anterior; falha de leitura mantém o formulário vazio sem sucesso falso.
 - Teste humano aprovado pelo operador; persistência entre visitas segue fora do recorte.
 - Pendências de limpeza (decisão humana): 2 submissões sintéticas ("Teste REF02 Sintetico", "Teste REF02 Fechamento") + 1 agendamento de teste em `slot-2026-09-21-1130` + 1 submissão sintética REF-03 ("Teste REF03 Sintetico").
@@ -64,7 +64,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 - Estado anterior do código (v0.0.92): OCUPACOES tinha 7 opções — CLT; Autônomo/Empresário (juntos); Executivo/Gestor; Estudante; Aposentado; "Profissional da saúde, educação ou outra área com horário irregular" (categorias genéricas); "Prefiro não informar". Não existia pergunta secundária de profissão.
 - Valor interno = rótulo antes da REF-03; a migração 0059 altera valores futuros; histórico antigo continua legível (texto puro), sem recálculo (regra 5 da SPEC).
-- Recorte executado: migração 0059 + Index.tsx + Agendar.tsx; nenhuma outra coleção alterada.
+- Recorte executado: migração 0059 + Index.tsx + Index.tsx + Agendar.tsx; nenhuma outra coleção alterada.
 
 ## Implementação REF-04 — concluída 06/11/2026 (v0.0.94, commit f569edc)
 
@@ -77,7 +77,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 ## Análise REF-04 — resumo sanitizado (30/10/2026, somente leitura)
 
 - Endereço no código: header do formulário "Terrazzo R1 Sports Club · Alto do Itaigara" (Index.tsx, bloco do cabeçalho); rodapé do formulário "Terrazzo R1 Sports Club · Rua Rosa dos Ventos, Alto do Itaigara" (Index.tsx, rodapé); Agendar.tsx cita "Terrazzo R1 Sports Club" sem rua (2 ocorrências); telas internas (Fila/Visão/Funil/Dashboard/Saude/NotFound) sem endereço voltado a lead.
-- Menções de prêmio/freepass no formulário (Index.tsx): microcopy da etapa 6 ("desbloquear seu prêmio"); microcopy da etapa 7 ("garanta sua Aula Experimental Gratuita"); mensagem de erro do consentimento ("resgatar o prêmio"); mensagem do WhatsApp pós-triagem ("agendar minha Aula Experimental Gratuita"); tela de sucesso com 2 menções ("Seu prêmio de Aula Experimental Gratuita está desbloqueado..." e "Resgate sua Aula Experimental Gratuita agora"); botão final ("Concluir & Resgatar Prêmio"); checkbox de consentimento ("Aula Experimental Gratuita, avisos e informações").
+- Menções de prêmio/freepass no formulário (Index.tsx): microcopy da etapa 6 ("desbloquear seu prêmio"); microcopy da etapa 7 ("garanta sua Aula Experimental Gratuita"); mensagem de erro do consentimento ("resgatar o prêmio"); mensagem do WhatsApp pós-triagem ("agendar minha Aula Experimental Gratuita"); tela de sucesso com 2 menções ("Seu prêmio de Aula Experimental Gratuita..."); botão final ("Concluir & Resgatar Prêmio"); checkbox de consentimento ("Aula Experimental Gratuita, avisos e informações").
 - Agendar.tsx não menciona prêmio/freepass.
 - Nenhuma alteração feita nesta etapa; insumos bloqueiam implementação (regra da emenda: não escolher endereço por pesquisa pública, não criar promessa comercial).
 
@@ -88,5 +88,11 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - Superfícies de exibição candidatas: Fila (`/fila`, Queue.tsx — gate champion/consultor) e Visão (`/visao`, Visao.tsx — gate champion/consultor/gestao/supervisora); onde a equipe quer ver é insumo.
 - Persistência candidata: campo(s) novo(s) em `lead_submissions` (valor + versão da matriz + motivo) via migração 0060 — decisões de estrutura só após insumos e autorização.
 - Nada alterado nesta etapa; a SPEC proíbe inferir pesos de cargo/renda e criar mapa de calor não solicitado.
+
+## Insumos REF-05 — recebidos do consultor (06/11/2026)
+
+- **Insumo 1/3 — escala e pesos (respostas literais do formulário da task):** escala 0–10; Profissional CLT = 5; Autônomo = 6; Empresário = 7; Diretor ou alta gerência = 9; Estudante = 7; Aposentado = 7; Prefiro não informar = 5.
+- Observação registrada: "Prefiro não informar" recebeu peso explícito 5 — decisão do consultor; é distinta do tratamento de resposta AUSENTE/inválida (a definir no insumo 2).
+- Observação para o insumo 2 (não é decisão): com esses pesos, se as faixas forem Alta ≥8 / Média 5–7 / Baixa 0–4, nenhuma resposta da lista cai em Baixa — apenas resposta ausente com nota 0.
 
 - fase_5: planejada, liberar somente pelo ritual após F4
