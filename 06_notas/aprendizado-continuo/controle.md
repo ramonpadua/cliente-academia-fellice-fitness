@@ -34,3 +34,4 @@
 - 2026-10-16T17:35:00-03:00 · ciclo paralelo design system A+B (v0.0.89) · capturado · `AP-2026-10-16-1730-design-system-fundacao-ociosa.md`
 - 2026-10-29T16:20:00-03:00 · task `ce389a55-5a06-4dbe-b3d6-4516d17a0968` (REF-02) · capturado · `AP-2026-10-29-1610-transporte-contexto-triagem.md`
 - 2026-10-30T16:40:00-03:00 · task `d2aebe4c-2a02-48dc-a4fa-3ec1519b2ace` (REF-03) · capturado · `AP-2026-10-30-1640-listas-aprovadas-valem-sobre-spec.md`
+- 2026-11-06T10:30:00-03:00 · task `cf0687e4-1384-44ba-ae1b-6675124d27f0` (REF-04) · capturado · `AP-2026-11-06-1030-ressalva-insumo-antecipado.md`
