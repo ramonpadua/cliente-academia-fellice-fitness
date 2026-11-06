@@ -14,15 +14,15 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-04)
 - etapa: aguardando_autorizacao
-- insumos_recebidos: (1) endereço exato — Ricardo, 30/10/2026 16:50, literal: "Rua Rubens Guelli, 68 - Terraço - Itaigara, Salvador - BA, 41815-135"; (2) momento da oferta — Ricardo, 30/10/2026 10:09, literal: "deve aparecer somente quando a triagem for concluída e as respostas forem de acordo com a qualificação e perfil que desejamos". NOTA: a condicionalidade por qualificação/perfil depende da matriz da REF-06 (ainda não aprovada) — na REF-04 o recorte executável é "somente após a conclusão da triagem"; a parte de perfil fica para REF-06, conforme a SPEC ("a oferta final respeita REF-06; não concluir antes da prova combinada")
-- insumos_pendentes: (3) texto do prêmio final e se é o mesmo benefício ("Aula Experimental Gratuita")
+- insumos_recebidos: (1) endereço exato — Ricardo, 30/10/2026 16:50, literal: "Rua Rubens Guelli, 68 - Terraço - Itaigara, Salvador - BA, 41815-135"; (2) momento da oferta — Ricardo, 06/11/2026 10:09, literal: "deve aparecer somente quando a triagem for concluída e as respostas forem de acordo com a qualificação e perfil que desejamos". NOTA: a condicionalidade por qualificação/perfil depende da matriz da REF-06 (ainda não aprovada) — na REF-04 o recorte executável é "somente após a conclusão da triagem"; a parte de perfil fica para REF-06, conforme a SPEC ("a oferta final respeita REF-06; não concluir antes da prova combinada"); (3) texto do prêmio — Ricardo, 06/11/2026 10:10, literal: "Sim, é o mesmo benefício" (campo de texto livre não preenchido) — mantém "Aula Experimental Gratuita" como texto da oferta
+- insumos_pendentes: NENHUM — 3/3 coletados
 - autorizacao_implementacao: ausente
 - teste_humano: pendente
 - verificacao_automatica: pendente
 - aprendizado: pendente
-- ultima_acao: insumo 2/3 da REF-04 recebido e registrado — momento da oferta (30/10/2026 10:09), com dependência de REF-06 anotada
-- proxima_acao: coletar insumo 3/3 — texto do prêmio final e se é o mesmo benefício ("Aula Experimental Gratuita")
-- atualizado_em: 2026-10-30T20:12:00Z
+- ultima_acao: insumo 3/3 da REF-04 recebido e registrado — mesmo benefício "Aula Experimental Gratuita" (06/11/2026 10:10); correção da data do insumo 2 (30/10 → 06/11, erro de transcrição)
+- proxima_acao: aguardar autorização do consultor para implementar o plano REF-04 (endereço nas 3 superfícies; oferta única somente pós-triagem; perfil na REF-06)
+- atualizado_em: 2026-11-06T13:15:00Z
 
 ## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
 
