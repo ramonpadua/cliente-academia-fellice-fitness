@@ -11,14 +11,14 @@ Texto integral em `04_fase-atual/direcao-vigente.md` (confirmação do consultor
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-05)
 - etapa: coletando_insumos
 - insumos_recebidos: (1/3) escala e pesos — 06/11/2026, respostas literais do formulário da task: escala 0–10; CLT 5; Autônomo 6; Empresário 7; Diretor ou alta gerência 9; Estudante 7; Aposentado 7; Prefiro não informar 5; (2/3) faixas e desempate — 06/11/2026, respostas literais: Alta = nota ≥ 7; Baixa = nota ≤ 5 (entre eles, Média); desempate = ordem de chegada (mais antigo primeiro); resposta ausente/inválida = nota 0, cai em Baixa e exibe "Sem pontuação"
-- insumos_pendentes: (2b) pesos por profissão da sub-pergunta (CLT e Autônomo) — observação literal do consultor: "as sub perguntas da triagem, dos itens clt, autonomo e o que mais tiver, precisa ter peso também"; (3) onde a equipe vê a prioridade (Fila, Visão ou ambos) e se a Fila reordena ou só exibe
+- insumos_pendentes: (3) onde a equipe vê a prioridade (Fila, Visão ou ambos) e se a Fila reordena ou só exibe
 - autorizacao_implementacao: ausente
 - teste_humano: pendente
 - verificacao_automatica: pendente
 - aprendizado: pendente
-- ultima_acao: insumo 2/3 (faixas, desempate, ausentes) recebido; consultor abriu o sub-insumo 2b (pesos por profissão) (06/11/2026)
-- proxima_acao: coletar insumo 2b — peso por profissão, com as listas literais extraídas do código
-- atualizado_em: 2026-11-06T13:50:00Z
+- ultima_acao: sub-insumo 2b recebido — profissão substitui a ocupação; pesos literais registrados em ref05-insumos.md (06/11/2026)
+- proxima_acao: coletar insumo 3/3 — onde a equipe vê a prioridade e comportamento da Fila
+- atualizado_em: 2026-11-06T14:20:00Z
 
 ## Estado por task
 
