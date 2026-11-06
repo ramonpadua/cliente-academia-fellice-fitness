@@ -35,7 +35,7 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 ## Fechamento REF-04 — 06/11/2026 (v0.0.94, commit f569edc)
 
 - Teste humano aprovado pelo operador Ricardo em 06/11/2026 10:28 (literal: "o teste está ok"), com ressalva registrada: "o prêmio está disponível para todos, independente da triagem, a triagem é feita para qualificar o perfil do nosso cliente".
-- A ressalva confirma o recorte acordado: a oferta única pós-triagem foi implementada na REF-04; a condicionalidade por qualificação/perfil (elegibilidade) é escopo da REF-06 e depende da matriz v1 da REF-05 ainda não aprovada. A frase do Ricardo fica registrada como insumo antecipado da REF-06.
+- A ressalva confirma o recorte acordado: a oferta única pós-triagem foi implementada na REF-04; a condicionalidade por qualificação/perfil (elegibilidade) é escopo da REF-06 e depende da matriz de perfil ainda não aprovada. A frase do Ricardo fica registrada como insumo antecipado da REF-06.
 - Revalidação independente do fechamento (06/11): working tree v0.0.94 (commit f569edc) com Index.tsx v1.1.1 e Agendar.tsx; bundle do preview (index-DtdHmEAH.js) rebaixado e conferido — endereço aprovado 3×+1 parcial; 0 ocorrências dos textos de prêmio pré-triagem; oferta restante somente pós-triagem (3×); QA Skip verde (suite inexistente, ran=false).
 - Pendências de limpeza acumuladas (decisão humana): 3 submissões sintéticas + 1 agendamento de teste.
 - Próxima task elegível pela SPEC: REF-05 (pontuação de ocupação), pré-condição REF-03 aceita satisfeita; insumos (pesos por opção, escala, faixas, desempate) a coletar na própria task.
