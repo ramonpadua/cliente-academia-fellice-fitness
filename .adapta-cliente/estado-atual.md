@@ -13,16 +13,16 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - task_id: cf0687e4-1384-44ba-ae1b-6675124d27f0 (REF-04 — Corrigir o endereço e eliminar a oferta duplicada de freepass)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-04)
-- etapa: aguardando_teste_humano
+- etapa: concluida
 - insumos_recebidos: (1) endereço exato — Ricardo, 30/10/2026 16:50, literal: "Rua Rubens Guelli, 68 - Terraço - Itaigara, Salvador - BA, 41815-135"; (2) momento da oferta — Ricardo, 06/11/2026 10:09, literal: "deve aparecer somente quando a triagem for concluída e as respostas forem de acordo com a qualificação e perfil que desejamos". NOTA: a condicionalidade por qualificação/perfil depende da matriz da REF-06 (ainda não aprovada) — na REF-04 o recorte executável é "somente após a conclusão da triagem"; a parte de perfil fica para REF-06, conforme a SPEC ("a oferta final respeita REF-06; não concluir antes da prova combinada"); (3) texto do prêmio — Ricardo, 06/11/2026 10:10, literal: "Sim, é o mesmo benefício" (campo de texto livre não preenchido) — mantém "Aula Experimental Gratuita" como texto da oferta
 - insumos_pendentes: NENHUM — 3/3 coletados
 - autorizacao_implementacao: Ricardo, 06/11/2026 10:12, literal: "pode implementar"
-- teste_humano: PENDENTE — portão atual
+- teste_humano: aprovado com ressalva — Ricardo, 06/11/2026 10:28, literal: "o teste está ok, porém o prêmio está disponível para todos, independente da triagem, a triagem é feita para qualificar o perfil do nosso cliente". RESSALVA registrada como insumo antecipado da REF-06 (elegibilidade/perfil), fora do recorte da REF-04
 - verificacao_automatica: passou — QA Skip verde em v0.0.94 (commit f569edc; setup, estática, build, integrações; suite inexistente, ran=false) + provas no bundle do preview (index-DtdHmEAH.js): endereço aprovado 3× (header Index, rodapé Index, header Agendar) + 1 parcial na confirmação do Agendar; 0 ocorrências dos textos removidos (desbloquear seu prêmio, garanta sua Aula Experimental Gratuita, resgatar o prêmio, Concluir & Resgatar Prêmio, Rua Rosa dos Ventos, liberar minha Aula); oferta mantida somente pós-triagem (mensagem do WhatsApp + tela de sucesso 2×); botão final "Concluir" com ícone de check
-- aprendizado: pendente
-- ultima_acao: implementação REF-04 concluída — Skip v0.0.94 (commit f569edc), Index.tsx v1.1.1 e Agendar.tsx, sem migração nem mudança de coleção; QA verde; provas no preview
-- proxima_acao: teste humano do Ricardo no preview (endereço nas 3 superfícies; percurso das etapas 1–7 sem menção a prêmio; oferta presente só na tela de sucesso) e, aprovado, fechamento documental
-- atualizado_em: 2026-11-06T13:30:00Z
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-11-06-1030-ressalva-insumo-antecipado.md
+- ultima_acao: fechamento REF-04 — revalidação independente (working tree v0.0.94, bundle do preview rebaixado e conferido, QA) e fechamento documental em fase.md, STATUS.md, changelog.md, controle.md e AP (06/11/2026)
+- proxima_acao: nova task somente por ordem do consultor — próxima elegível pela SPEC é REF-05 (pontuação de ocupação), pré-condição REF-03 aceita satisfeita; a ressalva do teste (prêmio para todos) entra como insumo da REF-06
+- atualizado_em: 2026-11-06T13:40:00Z
 
 ## Fechamento REF-03 — 30/10/2026 (v0.0.93, commit 9ba9ab8)
 
@@ -31,6 +31,14 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 - Documentação atualizada: fase.md (checkbox + nota CONCLUÍDA), STATUS.md, changelog.md, controle.md e AP-2026-10-30-1640.
 - Pendências de limpeza acumuladas (decisão humana): 3 submissões sintéticas ("Teste REF02 Sintetico", "Teste REF02 Fechamento", "Teste REF03 Sintetico") + 1 agendamento de teste em `slot-2026-09-21-1130`.
 - Próxima task elegível pela SPEC: REF-04 (endereço/freepass), pré-condição REF-03 aceita satisfeita; insumos a coletar na própria task.
+
+## Fechamento REF-04 — 06/11/2026 (v0.0.94, commit f569edc)
+
+- Teste humano aprovado pelo operador Ricardo em 06/11/2026 10:28 (literal: "o teste está ok"), com ressalva registrada: "o prêmio está disponível para todos, independente da triagem, a triagem é feita para qualificar o perfil do nosso cliente".
+- A ressalva confirma o recorte acordado: a oferta única pós-triagem foi implementada na REF-04; a condicionalidade por qualificação/perfil (elegibilidade) é escopo da REF-06 e depende da matriz de perfil ainda não aprovada. A frase do Ricardo fica registrada como insumo antecipado da REF-06.
+- Revalidação independente do fechamento (06/11): working tree v0.0.94 (commit f569edc) com Index.tsx v1.1.1 e Agendar.tsx; bundle do preview (index-DtdHmEAH.js) rebaixado e conferido — endereço aprovado 3×+1 parcial; 0 ocorrências dos textos de prêmio pré-triagem; oferta restante somente pós-triagem (3×); QA Skip verde (suite inexistente, ran=false).
+- Pendências de limpeza acumuladas (decisão humana): 3 submissões sintéticas + 1 agendamento de teste.
+- Próxima task elegível pela SPEC: REF-05 (pontuação de ocupação), pré-condição REF-03 aceita satisfeita; insumos (pesos por opção, escala, faixas, desempate) a coletar na própria task.
 
 ## REF-01 — Fila (ABERTA, não corrigida)
 
