@@ -15,11 +15,11 @@ Texto integral em `04_fase-atual/direcao-vigente.md` (confirmação do consultor
 - insumos_pendentes: NENHUM
 - autorizacao_implementacao: ausente
 - teste_humano: pendente
-- verificacao_automatica: passou — QA Skip v0.0.95 (commit 916b9ec) verde (setup, estática, build, integrações; suite inexistente, ran=false); migração 0060_ref05_prioridade applied; campos prioridade_nota/faixa/matriz/motivo confirmados por API em lead_submissions e lead_appointments; 26/26 provas no bundle do preview (index-COT7Y_mK.js): pesos literais da matriz v1, faixas (>=7 alta, <=5 baixa), sem_pontuacao, rótulos Alta/Média/Baixa, ordenação da Fila (alta=3), gravação e transporte da prioridade, FORM_VERSION v1.2.0
+- verificacao_automatica: passou — QA Skip v0.0.95 (commit 916b9ec) verde (setup, estática, build, integrações; suite inexistente, ran=false); migração 0060_ref05_prioridade applied; campos prioridade_nota/faixa/matriz/motivo confirmados por API em lead_submissions e lead_appointments; 26/26 provas no bundle do preview (index-COT7Y_mK.js): pesos literais da matriz v1, faixas (>=7 alta, <=5 baixa), sem_pontuacao, rótulos Alta/Média/Baixa, ordenação da Fila (alta=3), gravação e transporte da prioridade, FORM_VERSION v1.2.0; debug r1 v0.0.96 (e811f84) com 9/9 provas no bundle index-CwBGX3zp.js
 - aprendizado: pendente
-- ultima_acao: implementação concluída e provada tecnicamente; portão de teste humano aberto (06/11/2026)
-- proxima_acao: teste humano do consultor no preview; fechamento documental somente após confirmação
-- atualizado_em: 2026-11-06T14:35:00Z
+- ultima_acao: reteste r3 — triagem "teste 6" (Diretor) concluiu com sucesso no código novo; teste da Fila BLOQUEADO: operador sem conta champion/consultor (gate por design); opções apresentadas (conta champion do Márcio, usuário de teste temporário via migração — precedente 0038, removido após o teste, ou credencial do administrador do painel Skip); pedido de exibir triagens sem agendamento na Visão registrado como proposta de task futura (06/11/2026)
+- proxima_acao: destravar o teste da Fila pela opção escolhida pelo consultor; fechamento documental somente após confirmação
+- atualizado_em: 2026-11-06T14:55:00Z
 
 ## Estado por task
 
