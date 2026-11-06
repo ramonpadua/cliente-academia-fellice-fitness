@@ -6,19 +6,20 @@ Texto integral em `04_fase-atual/direcao-vigente.md` (confirmação do consultor
 
 ## Controle do orquestrador
 
+
 - task_id: 547994b2-a335-4fd9-878a-52b67b6c0b60 (REF-05 — Criar pontuação de ocupação para priorizar o atendimento)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-05)
-- etapa: aguardando_autorizacao
+- etapa: aguardando_teste_humano
 - insumos_recebidos: TODOS (1/3 escala e pesos; 2/3 faixas e desempate; 2b pesos por profissão com regra "profissão substitui ocupação"; 3/3 exibição) — literais em ref05-insumos.md
 - insumos_pendentes: NENHUM
 - autorizacao_implementacao: ausente
 - teste_humano: pendente
-- verificacao_automatica: pendente
+- verificacao_automatica: passou — QA Skip v0.0.95 (commit 916b9ec) verde (setup, estática, build, integrações; suite inexistente, ran=false); migração 0060_ref05_prioridade applied; campos prioridade_nota/faixa/matriz/motivo confirmados por API em lead_submissions e lead_appointments; 26/26 provas no bundle do preview (index-COT7Y_mK.js): pesos literais da matriz v1, faixas (>=7 alta, <=5 baixa), sem_pontuacao, rótulos Alta/Média/Baixa, ordenação da Fila (alta=3), gravação e transporte da prioridade, FORM_VERSION v1.2.0
 - aprendizado: pendente
-- ultima_acao: insumo 3/3 recebido — Fila+Visão, Fila reordena (Alta primeiro, empate mais antigo), faixa+nota (06/11/2026)
-- proxima_acao: aguardar autorização do consultor para implementar
-- atualizado_em: 2026-11-06T14:25:00Z
+- ultima_acao: implementação concluída e provada tecnicamente; portão de teste humano aberto (06/11/2026)
+- proxima_acao: teste humano do consultor no preview; fechamento documental somente após confirmação
+- atualizado_em: 2026-11-06T14:35:00Z
 
 ## Estado por task
 
