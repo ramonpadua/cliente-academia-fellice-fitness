@@ -12,12 +12,12 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 - Fase atual: 4 — refinamentos da plataforma e validação/conversão local.
 - Entregas anteriores: fases 1 a 3 encerradas, arquivos e aceites preservados.
-- Cards preservados: 20 de topo; 12 refinamentos + 4 cards locais (baseline, loop, ciclo, revisão final) pendentes; 4 cards suspensos fora do recorte de execução. **REF-02 (29/10), REF-03 (30/10) e REF-04 (06/11) concluídas com teste humano aprovado; REF-01 segue aberta (erro não reproduzido, diagnóstico inconclusivo por SPEC). Nenhum outro aceite registrado.**
-- Execução técnica: Skip v0.0.94 (commit `f569edc`) no preview; produção não publicada. Banco alterado pela migração 0059 (REF-03) e por dados sintéticos de teste (3 submissões + 1 agendamento), pendentes de limpeza por decisão humana.
+- Cards preservados: 20 de topo; 12 refinamentos + 4 cards locais (baseline, loop, ciclo, revisão final) pendentes; 4 cards suspensos fora do recorte de execução. **REF-02 (29/10), REF-03 (30/10), REF-04 (06/11) e REF-05 (06/11) concluídas com teste humano aprovado; REF-01 segue aberta (erro não reproduzido, diagnóstico inconclusivo por SPEC). Nenhum outro aceite registrado.**
+- Execução técnica: Skip v0.0.98 (commit `5f5c25f`) no preview; produção não publicada. Banco alterado pelas migrações 0059 (REF-03), 0060/0061/0062 (REF-05) e por dados sintéticos de teste (3 submissões + 1 agendamento + usuário teste.r1@fellice-fitness.local), pendentes de limpeza por decisão humana.
 
 ## Sequência restante
 
-1. REF-01 a REF-10: corrigir e refinar formulário, dados, mídia, priorização, agendamento, Fila e Visão, conforme decisões confirmadas nas próprias tasks. (REF-02 concluída 29/10; REF-03 concluída 30/10; REF-04 concluída 06/11.)
+1. REF-01 a REF-10: corrigir e refinar formulário, dados, mídia, priorização, agendamento, Fila e Visão, conforme decisões confirmadas nas próprias tasks. (REF-02 concluída 29/10; REF-03 concluída 30/10; REF-04 concluída 06/11; REF-05 concluída 06/11.)
 2. REF-11 e REF-12: regressão do conjunto e aceite da cliente, sem avançar em falha.
 3. Baseline/alvo e ciclo local: medir fontes locais autorizadas, registrar cobertura/limitações e veredito humano. Não inventar dados ou declarar ganho sem evidência.
 4. Revisão da fase 4 pelo consultor, considerando somente o recorte vigente.
@@ -26,4 +26,4 @@ Uma implementação por vez, insumos operacionais perguntados à cliente na pró
 
 ## Próxima ação
 
-REF-05 (Criar pontuação de ocupação para priorizar o atendimento) — pré-condição REF-03 aceita, satisfeita; insumos (pesos por opção, escala, faixas de prioridade, desempate e onde a equipe vê a informação) a coletar na própria task. A ressalva do teste da REF-04 (prêmio disponível para todos) alimenta a REF-06 (elegibilidade por perfil). Alternativa: retomar REF-01 se a Fila voltar a falhar. Nenhuma conta externa é pré-requisito.
+REF-06 (Mostrar agendamento somente para quem atende às regras de perfil) — pré-condição REF-05 aceita, satisfeita; depende da matriz de perfil ainda não aprovada; a ressalva do teste da REF-04 ("o prêmio está disponível para todos, independente da triagem...") é insumo antecipado desta task; insumos a coletar na própria task. Task nova adicional decidida pelo consultor em 06/11: exibir triagens sem agendamento na Visão (análise e plano a preparar; autorização separada). Alternativa: retomar REF-01 se a Fila voltar a falhar. Nenhuma conta externa é pré-requisito.
