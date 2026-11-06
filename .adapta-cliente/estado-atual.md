@@ -6,7 +6,6 @@ Texto integral em `04_fase-atual/direcao-vigente.md` (confirmação do consultor
 
 ## Controle do orquestrador
 
-
 - task_id: 547994b2-a335-4fd9-878a-52b67b6c0b60 (REF-05 — Criar pontuação de ocupação para priorizar o atendimento)
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-004-refinamento-formulario-fila-visao.md (seção REF-05)
